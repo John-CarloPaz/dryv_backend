@@ -1,61 +1,173 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚗 Dryv
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+**Smart Flood-Aware Navigation App**
 
-## About Laravel
+Dryv is a Flutter-based mobile application designed to provide safe and efficient navigation during flood events. It integrates multiple data sources, including Project NOAH, Open-Meteo, and OpenWeather, combined with Mapbox’s routing and visualization capabilities. By analyzing real-time and historical flood data, Dryv intelligently detects flooded roads and dynamically reroutes users through the safest available paths.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 🌊 Key Features
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* **Real-Time Flood Detection:**
+  Integrates with **Project NOAH’s flood polygon database** using **PostgreSQL + PostGIS** to detect areas at risk.
 
-## Learning Laravel
+* **Rainfall-Based Flood Forecasting:**
+  Fetches accumulated rainfall data from **Open-Meteo** and **OpenWeather APIs** to estimate potential flood zones.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* **Dynamic Routing:**
+  Uses **Mapbox Directions API** for navigation and reroutes users automatically when a flooded road is detected.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* **Interactive Flood Map:**
+  Displays a live, zoomable map with **flooded regions**, **routes**, and **user position** using **Mapbox Maps Flutter**.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+* **Offline Support (planned):**
+  Store last known flood zones and base maps for navigation during connectivity loss.
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🗺️ System Architecture
 
-### Premium Partners
+```
++-------------------------+
+|      Flutter App        |
+| (UI, Routing, Mapbox)   |
++-----------+-------------+
+            |
+            | REST API calls
+            v
++-------------------------+
+|     Backend Server      |
+| (Laravel / Node / etc.) |
++-----------+-------------+
+            |
+            | Spatial queries (PostGIS)
+            v
++-------------------------+
+| PostgreSQL + PostGIS DB |
+| Flood polygons (NOAH)   |
+| Road network (OSM)      |
++-----------+-------------+
+            |
+            | Weather APIs
+            v
++-------------------------+
+| OpenMeteo / OpenWeather |
++-------------------------+
+```
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+---
 
-## Contributing
+## 🧩 Tech Stack
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+| Layer              | Technology                                 |
+| ------------------ | ------------------------------------------ |
+| Frontend           | Flutter (Dart)                             |
+| Maps & Navigation  | Mapbox Maps Flutter, Mapbox Directions API |
+| Database           | PostgreSQL + PostGIS                       |
+| Data Sources       | Project NOAH, Open-Meteo, OpenWeather      |
+| Hosting (optional) | AWS / Railway / Supabase                   |
+| APIs               | Custom backend or direct API calls         |
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## ⚙️ Setup Instructions
 
-## Security Vulnerabilities
+### 1. Prerequisites
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+* Flutter SDK (>=3.0)
+* Dart (>=3.0)
+* PostgreSQL (>=14) with PostGIS extension
+* Mapbox access token
+* OpenWeather and Open-Meteo API keys
 
-## License
+### 2. Clone the Repository
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+```bash
+git clone https://github.com/yourusername/dryv.git
+cd dryv
+```
+
+### 3. Install Dependencies
+
+```bash
+flutter pub get
+```
+
+### 4. Set Environment Variables
+
+Create a `.env` file (or Flutter environment config):
+
+```
+MAPBOX_ACCESS_TOKEN=your_mapbox_token
+OPENWEATHER_API_KEY=your_openweather_key
+OPENMETEO_API_URL=https://api.open-meteo.com/v1/forecast
+DATABASE_URL=postgres://user:password@localhost:5432/dryv
+```
+
+### 5. Run PostgreSQL + PostGIS
+
+```sql
+CREATE DATABASE dryv;
+\c dryv
+CREATE EXTENSION postgis;
+```
+
+Import Project NOAH flood polygons into your database.
+
+### 6. Run the App
+
+```bash
+flutter run
+```
+
+---
+
+## 🧠 How It Works
+
+1. **Weather Fetching:**
+   The app retrieves rainfall intensity and accumulation data via Open-Meteo and OpenWeather APIs.
+
+2. **Flood Risk Calculation:**
+   The backend evaluates rainfall data and cross-references flood polygons from Project NOAH using PostGIS spatial queries (`ST_Intersects`, `ST_Within`, etc.).
+
+3. **Routing:**
+   When a user requests navigation, the app uses Mapbox Directions API but filters out flooded roads. If a route crosses a flooded polygon, Dryv requests an alternate route.
+
+4. **Map Visualization:**
+   Mapbox renders:
+
+   * Blue polygons = flood zones
+   * Red lines = blocked roads
+   * Green lines = safe routes
+
+---
+
+## 🧪 Future Plans
+
+* Integration with **government flood sensors** (DPWH, PAGASA)
+* Push notifications for **flood warnings**
+* Offline cached maps and **offline rerouting**
+* Community reporting (user-submitted flood data)
+* Emergency contact quick-access during navigation
+
+---
+
+## 📸 Screenshots (Coming Soon)
+
+| Map View | Flood Zones | Safe Route |
+| -------- | ----------- | ---------- |
+| 🗺️      | 🌊          | ✅          |
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Zap John Carlo**
+📍 Pampanga, Philippines
+💡 Passionate about mobile development, spatial data, and real-world AI integration.
