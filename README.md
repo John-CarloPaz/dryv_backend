@@ -34,7 +34,7 @@ Dryv Backend exposes a REST API that:
 
 | Component         | Technology                               |
 | ----------------- | ---------------------------------------- |
-| Language          | PHP 8 / Laravel 11                       |
+| Language          | PHP 8 / Laravel 12                       |
 | Database          | PostgreSQL 15 + PostGIS                  |
 | Map & Routing     | Mapbox Directions & Map Matching API     |
 | Flood Data Source | Project NOAH Database                    |
@@ -65,21 +65,6 @@ Dryv Backend exposes a REST API that:
 | `weather_data` | Caches rainfall accumulation from APIs                         |
 | `boundaries`   | Administrative boundary geometries (barangay, city, province)  |
 
-### Example Geometry Columns
-
-```sql
-CREATE TABLE noah_floods (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255),
-  geom GEOMETRY(MultiPolygon, 4326)
-);
-
-CREATE TABLE roads (
-  id SERIAL PRIMARY KEY,
-  name VARCHAR(255),
-  geom GEOMETRY(LineString, 4326)
-);
-```
 
 ---
 
