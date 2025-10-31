@@ -1,0 +1,3236 @@
+[
+  {
+    "city": "Angeles City",
+    "name": "Agapito del Rosario",
+    "latitude": "15.144268724120593",
+    "longitude": "120.58961092230761"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Amsic",
+    "latitude": "15.155658559213895",
+    "longitude": "120.57096130076194"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Anunas",
+    "latitude": "15.155636872880569",
+    "longitude": "120.55366507197736"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Balibago",
+    "latitude": "15.166379145335807",
+    "longitude": "120.59094760289041"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Capaya I",
+    "latitude": "15.141121225287778",
+    "longitude": "120.62708590319326"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Capaya II",
+    "latitude": "15.145879274794353",
+    "longitude": "120.61702725122827"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Claro M. Recto",
+    "latitude": "15.147415847665044",
+    "longitude": "120.59267856912618"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Cuayan",
+    "latitude": "15.146972421208922",
+    "longitude": "120.54857949563565"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Cutcut",
+    "latitude": "15.137114649930318",
+    "longitude": "120.58280566924398"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Cutud",
+    "latitude": "15.17533541863079",
+    "longitude": "120.62682098005708"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Lourdes North West",
+    "latitude": "15.144662234887143",
+    "longitude": "120.58462916965617"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Lourdes Sur",
+    "latitude": "15.141949408446573",
+    "longitude": "120.59093003531822"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Lourdes Sur East",
+    "latitude": "15.143304193986557",
+    "longitude": "120.59344416051107"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Malabañas",
+    "latitude": "15.151493737376592",
+    "longitude": "120.58999979136537"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Margot",
+    "latitude": "15.170704519299882",
+    "longitude": "120.53503871876231"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Mining",
+    "latitude": "15.143033731741115",
+    "longitude": "120.60481477393927"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Ninoy Aquino (Marisol)",
+    "latitude": "15.151001618412817",
+    "longitude": "120.59904530213488"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Pampang",
+    "latitude": "15.146684928908364,",
+    "longitude": "120.57596820337892"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Pandan",
+    "latitude": "15.14675848876434",
+    "longitude": "120.60645106161503"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Pulung Cacutud",
+    "latitude": "15.16517270126272",
+    "longitude": "120.61676191905832"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Pulung Maragul",
+    "latitude": "15.161899067974524",
+    "longitude": "120.6078124145643"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Pulungbulu",
+    "latitude": "15.136051728303851",
+    "longitude": "120.59580020383828"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Salapungan",
+    "latitude": "15.146870883131452",
+    "longitude": "120.59792499608632"
+  },
+  {
+    "city": "Angeles City",
+    "name": "San Jose",
+    "latitude": "15.131966273104016",
+    "longitude": "120.59526057639799"
+  },
+  {
+    "city": "Angeles City",
+    "name": "San Nicolas",
+    "latitude": "15.139255850948746",
+    "longitude": "120.5848856837917"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Santa Teresita",
+    "latitude": "15.150250803097457",
+    "longitude": "120.58581587583608"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Santa Trinidad",
+    "latitude": "15.141917227393906",
+    "longitude": "120.58200588809305"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Santo Cristo",
+    "latitude": "15.142866956181804",
+    "longitude": "120.59870146948934"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Santo Domingo",
+    "latitude": "15.127600415487056",
+    "longitude": "120.60068136920097"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Santo Rosario (Poblacion)",
+    "latitude": "15.135410294250013",
+    "longitude": "120.59095314706855"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Sapalibutad",
+    "latitude": "15.158391674410321",
+    "longitude": "120.63291865742455"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Sapangbato",
+    "latitude": "15.17095869309478,",
+    "longitude": "120.5150762353467"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Tabun",
+    "latitude": "15.149210355473807",
+    "longitude": "120.61444836881373"
+  },
+  {
+    "city": "Angeles City",
+    "name": "Virgen Delos Remedios",
+    "latitude": "15.149680582145262",
+    "longitude": "120.59281852797214"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Alasas",
+    "latitude": "15.052068925196426",
+    "longitude": "120.65213500757743"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Baliti",
+    "latitude": "15.10734631011532,",
+    "longitude": "120.62282269103483"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Bulaon",
+    "latitude": "15.087886726292195",
+    "longitude": "120.66724477577496"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Calulut",
+    "latitude": "15.09574804540894,",
+    "longitude": "120.64840494668272"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Del Carmen",
+    "latitude": "15.064540641008819",
+    "longitude": "120.68126584064703"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Del Pilar",
+    "latitude": "15.033252985104362",
+    "longitude": "120.69766011925658"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Del Rosario",
+    "latitude": "15.069285304942769",
+    "longitude": "120.63999476844913"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Dela Paz Norte",
+    "latitude": "15.087111252776916",
+    "longitude": "120.6293827053307"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Dela Paz Sur",
+    "latitude": "15.077498434896688",
+    "longitude": "120.63383283286689"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Dolores",
+    "latitude": "15.030893402796513",
+    "longitude": "120.68522877616391"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Juliana",
+    "latitude": "15.035991367509016",
+    "longitude": "120.69124636326715"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Lara",
+    "latitude": "15.09500599931374",
+    "longitude": "120.61114266050187"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Lourdes",
+    "latitude": "15.02943555897293",
+    "longitude": "120.6919089297174"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Maimpis",
+    "latitude": "15.069433979655932",
+    "longitude": "120.6542592764796"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Magliman",
+    "latitude": "15.041644587814666",
+    "longitude": "120.65424078628938"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Malino",
+    "latitude": "15.125132457335255",
+    "longitude": "120.62353729238791"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Malpitic",
+    "latitude": "15.080001767602962",
+    "longitude": "120.65358358014814"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Pandaras",
+    "latitude": "15.028712710331192",
+    "longitude": "120.72429198789939"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Panipuan",
+    "latitude": "15.115887583292238,",
+    "longitude": "120.6370578327644"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Pulung Bulo",
+    "latitude": "15.127274411088903,",
+    "longitude": "120.61234782760485"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Quebiawan",
+    "latitude": "15.054298530039631",
+    "longitude": "120.6660746108206"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Saguin",
+    "latitude": "15.095817709848943",
+    "longitude": "120.62254846789732"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "San Agustin",
+    "latitude": "15.054348361751401,",
+    "longitude": "120.67400212903044"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "San Felipe",
+    "latitude": "15.039004083252912",
+    "longitude": "120.71017694026253"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "San Isidro",
+    "latitude": "15.06157839203887",
+    "longitude": "120.64885030823653"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "San Jose",
+    "latitude": "15.040231095697067",
+    "longitude": "120.70143530950656"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "San Juan",
+    "latitude": "15.022717469591074",
+    "longitude": "120.67726350107287"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "San Nicolas",
+    "latitude": "15.018576938390293",
+    "longitude": "120.70194673986667"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "San Pedro Cutud",
+    "latitude": "15.017716285333384",
+    "longitude": "120.6920542821534"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Santa Lucia",
+    "latitude": "15.02187652741396",
+    "longitude": "120.68720717115272"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Santa Teresita",
+    "latitude": "15.033230804957073",
+    "longitude": "120.69279290052029"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Santo Niño",
+    "latitude": "15.030306418349674",
+    "longitude": "120.68690898657934"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Santo Rosario (Poblacion)",
+    "latitude": "15.034751783584632",
+    "longitude": "120.7005675891281"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Sindalan",
+    "latitude": "15.083880363293556",
+    "longitude": "120.64440251786738"
+  },
+  {
+    "city": "San Fernando City",
+    "name": "Telabastagan",
+    "latitude": "15.113818062630527",
+    "longitude": "120.60865183471654"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Atlu-Bola",
+    "latitude": "15.23557939797251",
+    "longitude": "120.58288837533881"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Bical",
+    "latitude": "15.195097051255845",
+    "longitude": "120.62029339122893"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Bundagul",
+    "latitude": "15.2285473147346,",
+    "longitude": "120.6079886881413"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Cacutud",
+    "latitude": "15.238415132609232",
+    "longitude": "120.5740334203318"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Calumpang",
+    "latitude": "15.224116774044058",
+    "longitude": "120.53986340753855"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Camachiles",
+    "latitude": "15.195858096295254,",
+    "longitude": "120.593558707695"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Dapdap",
+    "latitude": "15.230454847873217",
+    "longitude": "120.63127171209493"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Dau",
+    "latitude": "15.174673982728933",
+    "longitude": "120.58677563168327"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Dolores",
+    "latitude": "15.265306927229224",
+    "longitude": "120.672318429901"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Duquit",
+    "latitude": "15.17771900366341",
+    "longitude": "120.60026998187885"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Lakandula",
+    "latitude": "15.17191195353235",
+    "longitude": "120.58771586984155"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Mabiga",
+    "latitude": "15.201731297496854",
+    "longitude": "120.5830745403211"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Macapagal Village",
+    "latitude": "15.21247445046539",
+    "longitude": "120.53847185691141"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Mamatitang",
+    "latitude": "15.230167191388269",
+    "longitude": "120.57266566585713"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Mangalit",
+    "latitude": "15.2264471509854",
+    "longitude": "120.57895074482286"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Marcos Village",
+    "latitude": "15.208813957679363",
+    "longitude": "120.52940081440295"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Mawaque",
+    "latitude": "15.209067000914509",
+    "longitude": "120.5917462567804"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Paralayunan",
+    "latitude": "15.232672409401788",
+    "longitude": "120.61346942311842"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Poblacion (Virgen de Gracia)",
+    "latitude": "15.223936267413007",
+    "longitude": "120.57294991383468"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "San Francisco",
+    "latitude": "15.21972419894863,",
+    "longitude": "120.57146612344026"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "San Joaquin",
+    "latitude": "15.22993021374345",
+    "longitude": "120.57092132208156"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Santa Ines",
+    "latitude": "15.223280919584335",
+    "longitude": "120.5753986973444"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Santa Maria",
+    "latitude": "15.222472057734166",
+    "longitude": "120.59901679979288"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Santo Rosario",
+    "latitude": "15.216044540928449",
+    "longitude": "120.5725856805877"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Sapang Balen",
+    "latitude": "15.25146829750693",
+    "longitude": "120.60084285244687"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Sapang Biabas",
+    "latitude": "15.196624858505146",
+    "longitude": "120.60076730695211"
+  },
+  {
+    "city": "Mabalacat City",
+    "name": "Tabun",
+    "latitude": "15.24936064994572",
+    "longitude": "120.56644697375259"
+  },
+  {
+    "city": "Apalit",
+    "name": "Balucuc",
+    "latitude": "14.965165657277211",
+    "longitude": "120.83739774637115"
+  },
+  {
+    "city": "Apalit",
+    "name": "Calantipe",
+    "latitude": "14.981546073590762",
+    "longitude": "120.85666306282495"
+  },
+  {
+    "city": "Apalit",
+    "name": "Cansinala",
+    "latitude": "14.971479636057103",
+    "longitude": "120.78563473810087"
+  },
+  {
+    "city": "Apalit",
+    "name": "Capalangan",
+    "latitude": "14.930582172058847",
+    "longitude": "120.76893130439439"
+  },
+  {
+    "city": "Apalit",
+    "name": "Colgante",
+    "latitude": "14.937876519612432",
+    "longitude": "120.73357019451932"
+  },
+  {
+    "city": "Apalit",
+    "name": "Paligui",
+    "latitude": "14.981114561461993",
+    "longitude": "120.76242036124532"
+  },
+  {
+    "city": "Apalit",
+    "name": "Sampaloc",
+    "latitude": "14.546321607088405",
+    "longitude": "121.36438632551346"
+  },
+  {
+    "city": "Apalit",
+    "name": "San Juan (Poblacion)",
+    "latitude": "14.953520573823678",
+    "longitude": "120.76929677122658"
+  },
+  {
+    "city": "Apalit",
+    "name": "San Vicente",
+    "latitude": "14.946111407992284",
+    "longitude": "120.7498295012358"
+  },
+  {
+    "city": "Apalit",
+    "name": "Sucad",
+    "latitude": "14.966543936836864",
+    "longitude": "120.78433236351486"
+  },
+  {
+    "city": "Apalit",
+    "name": "Sulipan",
+    "latitude": "14.936865841953567",
+    "longitude": "120.7583129769214"
+  },
+  {
+    "city": "Apalit",
+    "name": "Tabuyuc",
+    "latitude": "14.952064743053809",
+    "longitude": "120.77781796131835"
+  },
+  {
+    "city": "Arayat",
+    "name": "Arenas",
+    "latitude": "15.169057972749759",
+    "longitude": "120.68735899630505"
+  },
+  {
+    "city": "Arayat",
+    "name": "Baliti",
+    "latitude": "15.195534070624099",
+    "longitude": "120.72374227381641"
+  },
+  {
+    "city": "Arayat",
+    "name": "Batasan",
+    "latitude": "15.148334765069453",
+    "longitude": "120.7912423316772"
+  },
+  {
+    "city": "Arayat",
+    "name": "Buensuceso",
+    "latitude": "15.19409006258404",
+    "longitude": "120.67361566787746"
+  },
+  {
+    "city": "Arayat",
+    "name": "Candating",
+    "latitude": "15.149344685166808",
+    "longitude": "120.81109596484274"
+  },
+  {
+    "city": "Arayat",
+    "name": "Gatiawin",
+    "latitude": "15.152033023906244",
+    "longitude": "120.74160220420032"
+  },
+  {
+    "city": "Arayat",
+    "name": "Guemasan",
+    "latitude": "15.148353605174597",
+    "longitude": "120.77746957811136"
+  },
+  {
+    "city": "Arayat",
+    "name": "La Paz (Turu)",
+    "latitude": "15.246248080273235",
+    "longitude": "120.73459539000052"
+  },
+  {
+    "city": "Arayat",
+    "name": "Lacmit",
+    "latitude": "15.140611094908655",
+    "longitude": "120.73868555996664"
+  },
+  {
+    "city": "Arayat",
+    "name": "Lacquios",
+    "latitude": "15.167534557111738",
+    "longitude": "120.77381855044175"
+  },
+  {
+    "city": "Arayat",
+    "name": "Mangga-Cacutud",
+    "latitude": "15.148394632758006",
+    "longitude": "120.76318839521147"
+  },
+  {
+    "city": "Arayat",
+    "name": "Mapalad",
+    "latitude": "15.206906632083172",
+    "longitude": "120.81097089523261"
+  },
+  {
+    "city": "Arayat",
+    "name": "Palinlang",
+    "latitude": "15.172147408817278",
+    "longitude": "120.70521259735456"
+  },
+  {
+    "city": "Arayat",
+    "name": "Paralaya",
+    "latitude": "15.147460518022749",
+    "longitude": "120.77827026123103"
+  },
+  {
+    "city": "Arayat",
+    "name": "Plazang Luma",
+    "latitude": "15.152360132884711",
+    "longitude": "120.77215228471259"
+  },
+  {
+    "city": "Arayat",
+    "name": "Poblacion",
+    "latitude": "14.565159713713317",
+    "longitude": "121.03980224971697"
+  },
+  {
+    "city": "Arayat",
+    "name": "San Agustin Norte",
+    "latitude": "15.162796798651604",
+    "longitude": "120.7803474563558"
+  },
+  {
+    "city": "Arayat",
+    "name": "San Agustin Sur",
+    "latitude": "15.157731489729414",
+    "longitude": "120.7792897849519"
+  },
+  {
+    "city": "Arayat",
+    "name": "San Antonio",
+    "latitude": "15.155136275835845",
+    "longitude": "120.69852846863986"
+  },
+  {
+    "city": "Arayat",
+    "name": "San Jose Mesulo",
+    "latitude": "15.161115983843823",
+    "longitude": "120.80874380789369"
+  },
+  {
+    "city": "Arayat",
+    "name": "San Juan Baño",
+    "latitude": "15.173195447600031",
+    "longitude": "120.7755205860771"
+  },
+  {
+    "city": "Arayat",
+    "name": "San Mateo",
+    "latitude": "15.16950323975257",
+    "longitude": "120.78912089893798"
+  },
+  {
+    "city": "Arayat",
+    "name": "San Nicolas",
+    "latitude": "15.12805512676404",
+    "longitude": "120.77646933841481"
+  },
+  {
+    "city": "Arayat",
+    "name": "San Roque Bitas",
+    "latitude": "15.154844422700366",
+    "longitude": "120.72314609793555"
+  },
+  {
+    "city": "Arayat",
+    "name": "Cupang (Santa Lucia)",
+    "latitude": "15.136599909418099",
+    "longitude": "120.78584203311458"
+  },
+  {
+    "city": "Arayat",
+    "name": "Matamo (Santa Lucia)",
+    "latitude": "15.137486915087447",
+    "longitude": "120.79884416922694"
+  },
+  {
+    "city": "Arayat",
+    "name": "Santo Niño Tabuan",
+    "latitude": "15.181434238325481",
+    "longitude": "120.80132929892001"
+  },
+  {
+    "city": "Arayat",
+    "name": "Suclayin",
+    "latitude": "15.163852404743368",
+    "longitude": "120.79456473627798"
+  },
+  {
+    "city": "Arayat",
+    "name": "Telapayong",
+    "latitude": "15.185295712287656",
+    "longitude": "120.67602604342335"
+  },
+  {
+    "city": "Arayat",
+    "name": "Kaledian (Camba)",
+    "latitude": "15.168756306777974",
+    "longitude": "120.79059504112348"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Balas",
+    "latitude": "15.035207148658893",
+    "longitude": "120.60478489143186"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Cabalantian",
+    "latitude": "15.006871026672592",
+    "longitude": "120.67419438724374"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Cabambangan",
+    "latitude": "14.997438292076154",
+    "longitude": "120.65240272891505"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Cabetican",
+    "latitude": "14.989931669731336",
+    "longitude": "120.65010729604296"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Calibutbut",
+    "latitude": "15.116231086127357",
+    "longitude": "120.60287058790449"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Concepcion",
+    "latitude": "15.044411327828351",
+    "longitude": "120.63051418802013"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Dolores",
+    "latitude": "15.059103552610823",
+    "longitude": "120.64800142382457"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Duat",
+    "latitude": "15.040939083860977",
+    "longitude": "120.61714689159736"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Macabacle",
+    "latitude": "15.026459833191424",
+    "longitude": "120.66196458525346"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Magliman",
+    "latitude": "15.029981051277927",
+    "longitude": "120.66954730123587"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Maliwalu",
+    "latitude": "15.084409286155875",
+    "longitude": "120.60891998104562"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Mesalipit",
+    "latitude": "14.994983498108352",
+    "longitude": "120.68750595236224"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Parulog",
+    "latitude": "15.011378007501007",
+    "longitude": "120.64370195594375"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Potrero",
+    "latitude": "15.052019361473638",
+    "longitude": "120.61115882454006"
+  },
+  {
+    "city": "Bacolor",
+    "name": "San Antonio",
+    "latitude": "15.02887770833424",
+    "longitude": "120.63364182676908"
+  },
+  {
+    "city": "Bacolor",
+    "name": "San Isidro",
+    "latitude": "15.06315363879711",
+    "longitude": "120.65280463336957"
+  },
+  {
+    "city": "Bacolor",
+    "name": "San Vicente",
+    "latitude": "15.006261620990191",
+    "longitude": "120.65790104043721"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Santa Barbara",
+    "latitude": "15.016660009105504",
+    "longitude": "120.63109767147401"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Santa Ines",
+    "latitude": "14.995330603426694",
+    "longitude": "120.65679790828013"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Talba",
+    "latitude": "14.985914057549794",
+    "longitude": "120.6734037520691"
+  },
+  {
+    "city": "Bacolor",
+    "name": "Tinajero",
+    "latitude": "14.984848611009776",
+    "longitude": "120.6705045062248"
+  },
+  {
+    "city": "Candaba",
+    "name": "Bahay Pare",
+    "latitude": "14.767963192779801",
+    "longitude": "121.01331851252007"
+  },
+  {
+    "city": "Candaba",
+    "name": "Bambang",
+    "latitude": "15.097929290885396",
+    "longitude": "120.84739004285584"
+  },
+  {
+    "city": "Candaba",
+    "name": "Barangca",
+    "latitude": "15.116652322485987",
+    "longitude": "120.91732574755571"
+  },
+  {
+    "city": "Candaba",
+    "name": "Barit",
+    "latitude": "15.027247307525453",
+    "longitude": "120.83465416126825"
+  },
+  {
+    "city": "Candaba",
+    "name": "Buas",
+    "latitude": "15.093135216257167",
+    "longitude": "120.82608461935001"
+  },
+  {
+    "city": "Candaba",
+    "name": "Cuayang Bugtong",
+    "latitude": "15.194735380685213",
+    "longitude": "120.92235944112673"
+  },
+  {
+    "city": "Candaba",
+    "name": "Dalayap",
+    "latitude": "15.018477935637323",
+    "longitude": "120.86720597122405"
+  },
+  {
+    "city": "Candaba",
+    "name": "Dulong Ilog",
+    "latitude": "15.0383380591688",
+    "longitude": "120.86585041567513"
+  },
+  {
+    "city": "Candaba",
+    "name": "Gulap",
+    "latitude": "15.102936717025297",
+    "longitude": "120.81998209814364"
+  },
+  {
+    "city": "Candaba",
+    "name": "Lanang",
+    "latitude": "15.106294876166281",
+    "longitude": "120.84157153111461"
+  },
+  {
+    "city": "Candaba",
+    "name": "Lourdes",
+    "latitude": "15.153051048759686",
+    "longitude": "120.92364380599359"
+  },
+  {
+    "city": "Candaba",
+    "name": "Magumbali",
+    "latitude": "15.135009685970822",
+    "longitude": "120.90905115107006"
+  },
+  {
+    "city": "Candaba",
+    "name": "Mandasig",
+    "latitude": "15.075238077595996",
+    "longitude": "120.81499969238709"
+  },
+  {
+    "city": "Candaba",
+    "name": "Mandili",
+    "latitude": "15.168481198023315",
+    "longitude": "120.91019947126475"
+  },
+  {
+    "city": "Candaba",
+    "name": "Mangga",
+    "latitude": "15.017117153829034",
+    "longitude": "120.87139579462107"
+  },
+  {
+    "city": "Candaba",
+    "name": "Mapaniqui",
+    "latitude": "15.11320099094888",
+    "longitude": "120.93087478980745"
+  },
+  {
+    "city": "Candaba",
+    "name": "Paligui",
+    "latitude": "15.046913217699503",
+    "longitude": "120.87916702363138"
+  },
+  {
+    "city": "Candaba",
+    "name": "Pangclara",
+    "latitude": "15.061989778149377",
+    "longitude": "120.89903366836498"
+  },
+  {
+    "city": "Candaba",
+    "name": "Pansinao",
+    "latitude": "15.124038312608299",
+    "longitude": "120.8076693059235"
+  },
+  {
+    "city": "Candaba",
+    "name": "Paralaya",
+    "latitude": "15.133021353871044",
+    "longitude": "120.89355083896587"
+  },
+  {
+    "city": "Candaba",
+    "name": "Pasig",
+    "latitude": "15.095071810736393",
+    "longitude": "120.8202578280012"
+  },
+  {
+    "city": "Candaba",
+    "name": "Pescadores",
+    "latitude": "15.09163089269764",
+    "longitude": "120.82789455977746"
+  },
+  {
+    "city": "Candaba",
+    "name": "Pulong Gubat",
+    "latitude": "15.047162839965758",
+    "longitude": "120.91197241086364"
+  },
+  {
+    "city": "Candaba",
+    "name": "Pulong Palazan",
+    "latitude": "15.023750169557063",
+    "longitude": "120.88464802508574"
+  },
+  {
+    "city": "Candaba",
+    "name": "Salapungan",
+    "latitude": "15.14677659181372",
+    "longitude": "120.96733703459354"
+  },
+  {
+    "city": "Candaba",
+    "name": "San Agustin",
+    "latitude": "15.091183350778897",
+    "longitude": "120.83265135376607"
+  },
+  {
+    "city": "Candaba",
+    "name": "Santo Rosario",
+    "latitude": "15.126086406616023",
+    "longitude": "120.82350578965803"
+  },
+  {
+    "city": "Candaba",
+    "name": "Tagulod",
+    "latitude": "15.208467092457926",
+    "longitude": "120.91649991780697"
+  },
+  {
+    "city": "Candaba",
+    "name": "Talang",
+    "latitude": "15.018920609236279",
+    "longitude": "120.8516490987732"
+  },
+  {
+    "city": "Candaba",
+    "name": "Tenejero",
+    "latitude": "15.01951761060377",
+    "longitude": "120.85888346053926"
+  },
+  {
+    "city": "Candaba",
+    "name": "Vizal San Pablo",
+    "latitude": "15.047965620515212",
+    "longitude": "120.89932432874602"
+  },
+  {
+    "city": "Candaba",
+    "name": "Vizal Santo Cristo",
+    "latitude": "15.04063031162477",
+    "longitude": "120.91701688332499"
+  },
+  {
+    "city": "Candaba",
+    "name": "Vizal Santo Nino",
+    "latitude": "15.037801609865497",
+    "longitude": "120.90555981684359"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Anon",
+    "latitude": "14.916991769524326",
+    "longitude": "120.49416296825298"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Apalit",
+    "latitude": "14.977659340683221",
+    "longitude": "120.48114851198193"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Basa Air Base",
+    "latitude": "14.978039491075268",
+    "longitude": "120.50289739386604"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Benedicto",
+    "latitude": "15.008340861513012",
+    "longitude": "120.52695169538194"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Bodega",
+    "latitude": "14.92232563473781",
+    "longitude": "120.48038460745124"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Cabangcalan",
+    "latitude": "14.952555941096016",
+    "longitude": "120.52135765745254"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Calantas",
+    "latitude": "15.020877270205398",
+    "longitude": "120.5183437384132"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Carmencita",
+    "latitude": "14.948467124885592",
+    "longitude": "120.48501452479049"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Consuelo",
+    "latitude": "14.965578638879972",
+    "longitude": "120.49391557900704"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Dampe",
+    "latitude": "14.935881895713619",
+    "longitude": "120.47887834810864"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Del Carmen",
+    "latitude": "15.009318705663214",
+    "longitude": "120.54773994167148"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Fortuna",
+    "latitude": "14.99150151549245",
+    "longitude": "120.57329575527869"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Gutad",
+    "latitude": "14.935577813137433",
+    "longitude": "120.49348564580806"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Mabical",
+    "latitude": "14.980863125190117",
+    "longitude": "120.53824063608502"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Sto. Rosario",
+    "latitude": "14.896972694144228",
+    "longitude": "120.48251041393749"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Maligaya",
+    "latitude": "14.976300138946675",
+    "longitude": "120.5251205672529"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Nabuclod",
+    "latitude": "15.01637263754754",
+    "longitude": "120.44387025704695"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Pabanlag",
+    "latitude": "14.975118292699317",
+    "longitude": "120.47422482768793"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Paguiruan",
+    "latitude": "14.998093779342431",
+    "longitude": "120.53461756355033"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Palmayo",
+    "latitude": "14.984355100877467",
+    "longitude": "120.4842433000317"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Pandaguirig",
+    "latitude": "14.986222080525481",
+    "longitude": "120.47984394087726"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Poblacion",
+    "latitude": "14.975945203495419",
+    "longitude": "120.52809468442656"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "San Antonio",
+    "latitude": "14.969544873788955",
+    "longitude": "120.52811741849035"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "San Isidro",
+    "latitude": "14.98535838943041",
+    "longitude": "120.5297909054245"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "San Jose",
+    "latitude": "14.989669581658807",
+    "longitude": "120.51004511316353"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "San Nicolas",
+    "latitude": "14.973668625249264",
+    "longitude": "120.50861536365"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "San Pedro",
+    "latitude": "14.943695873040408",
+    "longitude": "120.50912491634288"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "San Ramon",
+    "latitude": "15.000360884537542",
+    "longitude": "120.45408249690963"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "San Roque",
+    "latitude": "14.930719000010933",
+    "longitude": "120.50857119426573"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Sta. Monica",
+    "latitude": "14.956594544234639",
+    "longitude": "120.5062307553115"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Solib",
+    "latitude": "14.972928018691164",
+    "longitude": "120.53130111457399"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Valdez",
+    "latitude": "14.985472808965628",
+    "longitude": "120.53851085320508"
+  },
+  {
+    "city": "Floridablanca",
+    "name": "Mawacat",
+    "latitude": "14.978298624261777",
+    "longitude": "120.43389002520348"
+  },
+  {
+    "city": "Guagua",
+    "name": "Bancal",
+    "latitude": "14.955978244392165",
+    "longitude": "120.6305035015784"
+  },
+  {
+    "city": "Guagua",
+    "name": "Jose Abad Santos",
+    "latitude": "14.972857687985146",
+    "longitude": "120.60072408869799"
+  },
+  {
+    "city": "Guagua",
+    "name": "Lambac",
+    "latitude": "14.994562601325013",
+    "longitude": "120.57620256337043"
+  },
+  {
+    "city": "Guagua",
+    "name": "Magsaysay",
+    "latitude": "14.98175373613561",
+    "longitude": "120.57807054671274"
+  },
+  {
+    "city": "Guagua",
+    "name": "Maquiapo",
+    "latitude": "14.985455600897822",
+    "longitude": "120.55859937279533"
+  },
+  {
+    "city": "Guagua",
+    "name": "Natividad",
+    "latitude": "14.991379786504561",
+    "longitude": "120.59268152436968"
+  },
+  {
+    "city": "Guagua",
+    "name": "Plaza Burgos",
+    "latitude": "14.966648976301183",
+    "longitude": "120.63306880026822"
+  },
+  {
+    "city": "Guagua",
+    "name": "Pulungmasle",
+    "latitude": "15.00911955741662",
+    "longitude": "120.54616589071094"
+  },
+  {
+    "city": "Guagua",
+    "name": "Rizal",
+    "latitude": "14.98166368667759",
+    "longitude": "120.60703038443057"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Agustin",
+    "latitude": "14.973634889812311",
+    "longitude": "120.64325984735716"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Antonio",
+    "latitude": "14.965164489660232",
+    "longitude": "120.61255193656335"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Isidro",
+    "latitude": "15.037898902668035",
+    "longitude": "120.64612709620891"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Jose",
+    "latitude": "14.97806721758307",
+    "longitude": "120.61559971032851"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Juan Bautista",
+    "latitude": "14.975114202677135",
+    "longitude": "120.61934099672563"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Juan Nepomuceno",
+    "latitude": "14.978644117274408",
+    "longitude": "120.64065354175915"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Matias",
+    "latitude": "14.978211264985072",
+    "longitude": "120.62187236604123"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Miguel",
+    "latitude": "14.987390319809068",
+    "longitude": "120.6720403920399"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Nicolas 1st",
+    "latitude": "14.970359855978629",
+    "longitude": "120.63387767889245"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Nicolas 2nd",
+    "latitude": "14.98264266575321",
+    "longitude": "120.65740085071775"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Pablo",
+    "latitude": "14.968986481948377",
+    "longitude": "120.62191749344844"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Pedro",
+    "latitude": "14.964618015020898",
+    "longitude": "120.62410931937198"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Rafael",
+    "latitude": "14.96364089583156",
+    "longitude": "120.63570948998635"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Roque",
+    "latitude": "14.968727973443722",
+    "longitude": "120.63258810464283"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Vicente",
+    "latitude": "15.01229226339205",
+    "longitude": "120.58269666440987"
+  },
+  {
+    "city": "Guagua",
+    "name": "San Juan",
+    "latitude": "14.973250403844071",
+    "longitude": "120.61930905112816"
+  },
+  {
+    "city": "Guagua",
+    "name": "Santa Filomena",
+    "latitude": "14.968754404969209",
+    "longitude": "120.63649615745271"
+  },
+  {
+    "city": "Guagua",
+    "name": "Santa Ines",
+    "latitude": "14.982680625640866",
+    "longitude": "120.65582384581977"
+  },
+  {
+    "city": "Guagua",
+    "name": "Santa Ursula",
+    "latitude": "14.96904549216776",
+    "longitude": "120.65208642436897"
+  },
+  {
+    "city": "Guagua",
+    "name": "Santo Cristo",
+    "latitude": "14.965326260462012",
+    "longitude": "120.63205998192119"
+  },
+  {
+    "city": "Guagua",
+    "name": "Santo Nino (Poblacion)",
+    "latitude": "14.961175585321396",
+    "longitude": "120.62953219329924"
+  },
+  {
+    "city": "Guagua",
+    "name": "Ascomo",
+    "latitude": "15.012885962400775",
+    "longitude": "120.53180512491981"
+  },
+  {
+    "city": "Lubao",
+    "name": "Balantacan",
+    "latitude": "14.898804831054429",
+    "longitude": "120.55905281650828"
+  },
+  {
+    "city": "Lubao",
+    "name": "Bancal Sinubli",
+    "latitude": "14.85569461388218",
+    "longitude": "120.59453308323229"
+  },
+  {
+    "city": "Lubao",
+    "name": "Bancal Pugad",
+    "latitude": "14.831524288746023",
+    "longitude": "120.60112714337181"
+  },
+  {
+    "city": "Lubao",
+    "name": "Baruya",
+    "latitude": "14.872376210476867",
+    "longitude": "120.53595308739331"
+  },
+  {
+    "city": "Lubao",
+    "name": "Calangain",
+    "latitude": "14.89175855955671",
+    "longitude": "120.5552329270844"
+  },
+  {
+    "city": "Lubao",
+    "name": "Concepcion",
+    "latitude": "14.946860668115981",
+    "longitude": "120.58128117314787"
+  },
+  {
+    "city": "Lubao",
+    "name": "Del Carmen",
+    "latitude": "14.9345948452171",
+    "longitude": "120.55711474810349"
+  },
+  {
+    "city": "Lubao",
+    "name": "De La Paz",
+    "latitude": "14.933354999342308",
+    "longitude": "120.52849237334867"
+  },
+  {
+    "city": "Lubao",
+    "name": "Don Ignacio Dimson",
+    "latitude": "14.974338077137993",
+    "longitude": "120.58468618079263"
+  },
+  {
+    "city": "Lubao",
+    "name": "Lourdes",
+    "latitude": "14.892544049222147",
+    "longitude": "120.53563406999689"
+  },
+  {
+    "city": "Lubao",
+    "name": "Prado Siongco",
+    "latitude": "14.879907273572934",
+    "longitude": "120.51573299965796"
+  },
+  {
+    "city": "Lubao",
+    "name": "Remedios",
+    "latitude": "14.918668566746055",
+    "longitude": "120.57871851724221"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Agustin",
+    "latitude": "14.928620715006415",
+    "longitude": "120.57696479111857"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Antonio",
+    "latitude": "14.942564643747637",
+    "longitude": "120.57873638392378"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Francisco",
+    "latitude": "14.961533002579051",
+    "longitude": "120.54783922355917"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Isidro",
+    "latitude": "14.884739249222452",
+    "longitude": "120.52331236212537"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Jose Apunan",
+    "latitude": "14.96378623207731",
+    "longitude": "120.57480103347976"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Jose Gumi",
+    "latitude": "14.893516624931745",
+    "longitude": "120.58743696261585"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Juan",
+    "latitude": "14.934206689235781",
+    "longitude": "120.59846522800429"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Matias",
+    "latitude": "14.954713856487114",
+    "longitude": "120.58763545113719"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Miguel",
+    "latitude": "14.94998696203266",
+    "longitude": "120.55040617246382"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Nicolas 1st",
+    "latitude": "14.94301682745264",
+    "longitude": "120.59981897107133"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Nicolas 2nd",
+    "latitude": "14.935255188994008",
+    "longitude": "120.58709137659513"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Pablo 1st",
+    "latitude": "14.927459643820464",
+    "longitude": "120.51942738656847"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Pablo 2nd",
+    "latitude": "14.920597651014694",
+    "longitude": "120.54028079146963"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Pedro Palcarangan",
+    "latitude": "14.923329321846037",
+    "longitude": "120.52087769381188"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Pedro Saug",
+    "latitude": "14.9115909530203",
+    "longitude": "120.52320321415726"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Roque Arbol",
+    "latitude": "14.898277428977831",
+    "longitude": "120.5435108936096"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Roque Dau",
+    "latitude": "14.980300505896738",
+    "longitude": "120.59038126519725"
+  },
+  {
+    "city": "Lubao",
+    "name": "San Vicente",
+    "latitude": "14.948930337734275",
+    "longitude": "120.56671923791713"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santa Barbara",
+    "latitude": "14.930839181559568",
+    "longitude": "120.5942376806437"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santa Catalina",
+    "latitude": "14.922433694238478",
+    "longitude": "120.58836463145337"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santa Cruz",
+    "latitude": "14.91195507390236",
+    "longitude": "120.5537664364671"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santa Lucia",
+    "latitude": "14.935425479036141",
+    "longitude": "120.60089136212017"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santa Maria",
+    "latitude": "14.923700835897694",
+    "longitude": "120.57336482648579"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santa Monica",
+    "latitude": "14.958251184631965",
+    "longitude": "120.60683172913939"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santa Rita",
+    "latitude": "14.939329158058497",
+    "longitude": "120.53978842043283"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santa Teresa 1st",
+    "latitude": "14.926531719538207",
+    "longitude": "120.55801903869771"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santa Teresa 2nd",
+    "latitude": "14.886213881990804",
+    "longitude": "120.56387097338603"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santiago",
+    "latitude": "14.898170660453596",
+    "longitude": "120.52086125923269"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santo Domingo",
+    "latitude": "14.96022613910755",
+    "longitude": "120.5668981448547"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santo Nino (Prado Aruba)",
+    "latitude": "14.872140786535022",
+    "longitude": "120.50286647632953"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santo Tomas",
+    "latitude": "14.949785450994055",
+    "longitude": "120.60353159752961"
+  },
+  {
+    "city": "Lubao",
+    "name": "Santo Cristo",
+    "latitude": "14.948294024731863",
+    "longitude": "120.53257839257786"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Batasan",
+    "latitude": "14.915428944603113",
+    "longitude": "120.83926267351868"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Caduang Tete",
+    "latitude": "14.927103331800625",
+    "longitude": "120.72283017188678"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Candelaria",
+    "latitude": "14.884459190320245",
+    "longitude": "120.72152337904127"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Castuli",
+    "latitude": "14.926417713783447",
+    "longitude": "120.6516053963774"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Consuelo",
+    "latitude": "14.809555347298687",
+    "longitude": "120.64700732169041"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Dalayap",
+    "latitude": "14.903301469953469",
+    "longitude": "120.64832537114034"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Mataguiti",
+    "latitude": "14.923767552433645",
+    "longitude": "120.69616912375893"
+  },
+  {
+    "city": "Macabebe",
+    "name": "San Esteban",
+    "latitude": "14.85104560594049",
+    "longitude": "120.65133409875496"
+  },
+  {
+    "city": "Macabebe",
+    "name": "San Francisco",
+    "latitude": "14.901362847851154,",
+    "longitude": " 120.72521235553837"
+  },
+  {
+    "city": "Macabebe",
+    "name": "San Gabriel",
+    "latitude": "14.915258619077923",
+    "longitude": "120.72621563985358"
+  },
+  {
+    "city": "Macabebe",
+    "name": "San Isidro",
+    "latitude": "14.902085672620158",
+    "longitude": "120.71933879692845"
+  },
+  {
+    "city": "Macabebe",
+    "name": "San Jose",
+    "latitude": "14.908337427208343",
+    "longitude": "120.69033315600963"
+  },
+  {
+    "city": "Macabebe",
+    "name": "San Juan",
+    "latitude": "14.912334682630371",
+    "longitude": "120.70221005322162"
+  },
+  {
+    "city": "Macabebe",
+    "name": "San Rafael",
+    "latitude": "14.905022499758584",
+    "longitude": "120.69984109074836"
+  },
+  {
+    "city": "Macabebe",
+    "name": "San Roque",
+    "latitude": "14.916632764956507",
+    "longitude": "120.70673857132215"
+  },
+  {
+    "city": "Macabebe",
+    "name": "San Vicente",
+    "latitude": "14.89646319670344,",
+    "longitude": " 120.72705581348463"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Sta. Cruz",
+    "latitude": "14.906151369272663",
+    "longitude": "120.713794709766"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Sta. Lutgarda",
+    "latitude": "14.907629651115244",
+    "longitude": "120.69962305896159"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Sta. Maria",
+    "latitude": "14.901195000327299,",
+    "longitude": " 120.6805243131171"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Sta. Rita",
+    "latitude": "14.899711083777277,",
+    "longitude": " 120.71654349015775"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Sto. Nino",
+    "latitude": "14.909313968158676",
+    "longitude": "120.68773145940092"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Sto. Rosario",
+    "latitude": "14.914913829084552",
+    "longitude": "120.67757513743106"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Saplad David",
+    "latitude": "14.933518686783678,",
+    "longitude": " 120.70865020012715"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Tacasan",
+    "latitude": "14.9394586771494",
+    "longitude": "120.71341037776315"
+  },
+  {
+    "city": "Macabebe",
+    "name": "Telacsan",
+    "latitude": "14.941020325455321,",
+    "longitude": " 120.72645262519463"
+  },
+  {
+    "city": "Magalang",
+    "name": "Camias",
+    "latitude": "15.196284350578061",
+    "longitude": "120.65697317084972"
+  },
+  {
+    "city": "Magalang",
+    "name": "Dolores",
+    "latitude": "15.250061031354473",
+    "longitude": "120.64610397067591"
+  },
+  {
+    "city": "Magalang",
+    "name": "Escaler",
+    "latitude": "15.271936619217177",
+    "longitude": "120.7337451220531"
+  },
+  {
+    "city": "Magalang",
+    "name": "La Paz",
+    "latitude": "15.22880780646475",
+    "longitude": "120.64591250940227"
+  },
+  {
+    "city": "Magalang",
+    "name": "Navaling",
+    "latitude": "15.273380002155994",
+    "longitude": "120.66327830833268"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Agustin",
+    "latitude": "15.230527673624094,",
+    "longitude": "  120.72054445923486"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Antonio",
+    "latitude": "15.243361204017125",
+    "longitude": "120.65684687476664"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Franciso",
+    "latitude": "15.203058560021764,",
+    "longitude": " 120.64437250033333"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Ildefonso",
+    "latitude": "15.259019949998548",
+    "longitude": "120.70697312700875"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Isidro",
+    "latitude": "15.22541660645673,",
+    "longitude": " 120.6343414015683"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Jose",
+    "latitude": "15.199667053999777",
+    "longitude": "120.63397708504603"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Miguel",
+    "latitude": "15.232223211838381,",
+    "longitude": " 120.66333949240902"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Nicolas 1st",
+    "latitude": "15.221058518131422,",
+    "longitude": " 120.66029784246176"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Nicolas 2nd",
+    "latitude": "15.221660869376143",
+    "longitude": "120.66671325835603"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Pablo",
+    "latitude": "15.215491409956732",
+    "longitude": "120.67599244228722"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Pedro I",
+    "latitude": "15.213592957670956,",
+    "longitude": " 120.65749346717557"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Pedro II",
+    "latitude": "15.211591665847113",
+    "longitude": " 120.65072668211559,"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Roque",
+    "latitude": "15.259534969412158",
+    "longitude": "120.65218225272264"
+  },
+  {
+    "city": "Magalang",
+    "name": "San Vicente",
+    "latitude": "15.20105763981585",
+    "longitude": "120.69177724039241"
+  },
+  {
+    "city": "Magalang",
+    "name": "Santa Cruz",
+    "latitude": "15.212108784448237",
+    "longitude": "120.66511645097209"
+  },
+  {
+    "city": "Magalang",
+    "name": "Santa Lucia",
+    "latitude": "15.215389761383042",
+    "longitude": "120.63315591616448"
+  },
+  {
+    "city": "Magalang",
+    "name": "Santa Maria",
+    "latitude": "15.254007616743799",
+    "longitude": "120.67230920461269"
+  },
+  {
+    "city": "Magalang",
+    "name": "Santo Nino",
+    "latitude": "15.234430586343567",
+    "longitude": "120.71558693556777"
+  },
+  {
+    "city": "Magalang",
+    "name": "Santo Rosario",
+    "latitude": "15.247404958951314",
+    "longitude": "120.62884736371566"
+  },
+  {
+    "city": "Magalang",
+    "name": "Bucanan",
+    "latitude": "15.235043688789839,",
+    "longitude": " 120.67520085165843"
+  },
+  {
+    "city": "Magalang",
+    "name": "Turu",
+    "latitude": "15.248809835868425",
+    "longitude": "120.73383702774461"
+  },
+  {
+    "city": "Magalang",
+    "name": "Ayala",
+    "latitude": "15.224622764227037",
+    "longitude": "120.70848161308736"
+  },
+  {
+    "city": "Masantol",
+    "name": "Alauli",
+    "latitude": "14.859511475300467",
+    "longitude": "120.70714685615292"
+  },
+  {
+    "city": "Masantol",
+    "name": "Bagang",
+    "latitude": "14.845500268569177",
+    "longitude": "120.69688561595996"
+  },
+  {
+    "city": "Masantol",
+    "name": "Balibago",
+    "latitude": "14.8527063511709",
+    "longitude": "120.70179286085558"
+  },
+  {
+    "city": "Masantol",
+    "name": "Bebe Anac",
+    "latitude": "14.877610972136315",
+    "longitude": "120.70770246720062"
+  },
+  {
+    "city": "Masantol",
+    "name": "Bebe Matua",
+    "latitude": "14.872913035479298",
+    "longitude": "120.70471220034402"
+  },
+  {
+    "city": "Masantol",
+    "name": "Bulacus",
+    "latitude": "14.846121228891505",
+    "longitude": "120.67636706893789"
+  },
+  {
+    "city": "Masantol",
+    "name": "San Agustin",
+    "latitude": "14.858113955683972",
+    "longitude": "120.69670024091458"
+  },
+  {
+    "city": "Masantol",
+    "name": "Sta. Monica",
+    "latitude": "14.867143757454102",
+    "longitude": "120.69333014868809"
+  },
+  {
+    "city": "Masantol",
+    "name": "Cambasi",
+    "latitude": "14.865246350847277",
+    "longitude": "120.68399307027626"
+  },
+  {
+    "city": "Masantol",
+    "name": "Malauli",
+    "latitude": "14.836271956083763",
+    "longitude": "120.66976548265232"
+  },
+  {
+    "city": "Masantol",
+    "name": "Nigui",
+    "latitude": "14.827656895010797",
+    "longitude": "120.68598098194927"
+  },
+  {
+    "city": "Masantol",
+    "name": "Palimpe",
+    "latitude": "14.876410639713862",
+    "longitude": "120.66510829602332"
+  },
+  {
+    "city": "Masantol",
+    "name": "Puti",
+    "latitude": "14.854753917539666",
+    "longitude": "120.6876523183393"
+  },
+  {
+    "city": "Masantol",
+    "name": "Sagrada",
+    "latitude": "14.842373414093144",
+    "longitude": "120.69121249089771"
+  },
+  {
+    "city": "Masantol",
+    "name": "San Isidro Anac",
+    "latitude": "14.895041011613742",
+    "longitude": "120.69273356036808"
+  },
+  {
+    "city": "Masantol",
+    "name": "San Isidro Matua",
+    "latitude": "14.895602403058351",
+    "longitude": "120.70191337615266"
+  },
+  {
+    "city": "Masantol",
+    "name": "San Nicolas",
+    "latitude": "14.89192661178703",
+    "longitude": "120.70881334582307"
+  },
+  {
+    "city": "Masantol",
+    "name": "San Pedro",
+    "latitude": "14.84002750947145",
+    "longitude": "120.68213905663556"
+  },
+  {
+    "city": "Masantol",
+    "name": "Sta. Cruz",
+    "latitude": "14.858154378536153",
+    "longitude": "120.67280841497532"
+  },
+  {
+    "city": "Masantol",
+    "name": "Sta. Lucia Matua",
+    "latitude": "14.885948029548599",
+    "longitude": "120.70416381750167"
+  },
+  {
+    "city": "Masantol",
+    "name": "Sta. Lucia Paguiba",
+    "latitude": "14.888582697039581",
+    "longitude": "120.69984526804696"
+  },
+  {
+    "city": "Masantol",
+    "name": "Sta. Lucia Wakas",
+    "latitude": "14.882711752241166",
+    "longitude": "120.69687460121015"
+  },
+  {
+    "city": "Masantol",
+    "name": "Sta. Lucia Anac",
+    "latitude": "14.89087591051739,",
+    "longitude": " 120.70349866732477"
+  },
+  {
+    "city": "Masantol",
+    "name": "Sapang Kawayan",
+    "latitude": "14.809367654624065",
+    "longitude": "120.66922046609751"
+  },
+  {
+    "city": "Masantol",
+    "name": "Sua",
+    "latitude": "14.88552109200247",
+    "longitude": "120.69099403083294"
+  },
+  {
+    "city": "Masantol",
+    "name": "Sto. Nino",
+    "latitude": "14.887682347017723,",
+    "longitude": " 120.7084393614398"
+  },
+  {
+    "city": "Mexico",
+    "name": "Acli",
+    "latitude": "15.119710512216905",
+    "longitude": "120.64561531152853"
+  },
+  {
+    "city": "Mexico",
+    "name": "Anao",
+    "latitude": "15.137468334937804,",
+    "longitude": " 120.68444779682432"
+  },
+  {
+    "city": "Mexico",
+    "name": "Balas",
+    "latitude": "15.088548668046833",
+    "longitude": "120.71481517312068"
+  },
+  {
+    "city": "Mexico",
+    "name": "Buenavista",
+    "latitude": "15.162368000210982",
+    "longitude": "120.66516085593301"
+  },
+  {
+    "city": "Mexico",
+    "name": "Camuning",
+    "latitude": "15.114145357167974",
+    "longitude": "120.66003680346421"
+  },
+  {
+    "city": "Mexico",
+    "name": "Cawayan",
+    "latitude": "15.151886905885267",
+    "longitude": "120.67311576541827"
+  },
+  {
+    "city": "Mexico",
+    "name": "Concepcion",
+    "latitude": "15.114994643209277",
+    "longitude": "120.71581473437229"
+  },
+  {
+    "city": "Mexico",
+    "name": "Culubasa",
+    "latitude": "15.144858605567418",
+    "longitude": "120.6525193992598"
+  },
+  {
+    "city": "Mexico",
+    "name": "Divisoria",
+    "latitude": "15.09294456402822",
+    "longitude": "120.68600933781937"
+  },
+  {
+    "city": "Mexico",
+    "name": "Dolores",
+    "latitude": "15.036693250515011",
+    "longitude": "120.67992139557322"
+  },
+  {
+    "city": "Mexico",
+    "name": "Eden",
+    "latitude": "15.128723082366852",
+    "longitude": "120.65770465248542"
+  },
+  {
+    "city": "Mexico",
+    "name": "Gandus",
+    "latitude": "15.136102593842375",
+    "longitude": "120.63224986837798"
+  },
+  {
+    "city": "Mexico",
+    "name": "Lagundi",
+    "latitude": "15.05202004377151",
+    "longitude": "120.70763761508411"
+  },
+  {
+    "city": "Mexico",
+    "name": "Laput",
+    "latitude": "15.101000254869616",
+    "longitude": "120.71044982036588"
+  },
+  {
+    "city": "Mexico",
+    "name": "Laug",
+    "latitude": "15.047058262393588",
+    "longitude": "120.7491098444765"
+  },
+  {
+    "city": "Mexico",
+    "name": "Masamat",
+    "latitude": "15.055736686513761",
+    "longitude": "120.69866221494745"
+  },
+  {
+    "city": "Mexico",
+    "name": "Masangsang",
+    "latitude": "15.060745864242199",
+    "longitude": "120.71605372996004"
+  },
+  {
+    "city": "Mexico",
+    "name": "Nueva Victoria",
+    "latitude": "15.105187553679563",
+    "longitude": "120.67463388204641"
+  },
+  {
+    "city": "Mexico",
+    "name": "Pandacaqui",
+    "latitude": "15.177236618652715",
+    "longitude": "120.64643280461446"
+  },
+  {
+    "city": "Mexico",
+    "name": "Pangatlan",
+    "latitude": "15.113503992079211",
+    "longitude": "120.68645332752723"
+  },
+  {
+    "city": "Mexico",
+    "name": "Panipuan",
+    "latitude": "15.101868118673375",
+    "longitude": "120.66284984472932"
+  },
+  {
+    "city": "Mexico",
+    "name": "Parian",
+    "latitude": "15.066246968708748",
+    "longitude": "120.71631401914394"
+  },
+  {
+    "city": "Mexico",
+    "name": "Sabanilla",
+    "latitude": "15.071381266757188",
+    "longitude": "120.69224084458978"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Antonio",
+    "latitude": "15.055569245310014",
+    "longitude": "120.72635421252697"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Carlos",
+    "latitude": "15.073235723275218",
+    "longitude": "120.72201812320738"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Jose Malino",
+    "latitude": "15.126723419474102",
+    "longitude": "120.67623696292061"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Jose Matulid",
+    "latitude": "15.041285611018457",
+    "longitude": "120.72017342063253"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Juan",
+    "latitude": "15.127245170356868",
+    "longitude": "120.70461750847855"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Lorenzo",
+    "latitude": "15.05911694187572",
+    "longitude": "120.73869017698674"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Miguel",
+    "latitude": "15.07998350040551",
+    "longitude": "120.70282072930542"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Nicolas",
+    "latitude": "15.06629316058346",
+    "longitude": "120.7483133810572"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Pablo",
+    "latitude": "15.076355717275886",
+    "longitude": "120.73605196050097"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Patricio",
+    "latitude": "15.091114461708711",
+    "longitude": "120.73258039481098"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Rafael",
+    "latitude": "15.083401305630407",
+    "longitude": "120.68096386160805"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Roque",
+    "latitude": "15.07034898030561",
+    "longitude": "120.75943899760496"
+  },
+  {
+    "city": "Mexico",
+    "name": "San Vicente",
+    "latitude": "15.095168641121461",
+    "longitude": "120.70080132867858"
+  },
+  {
+    "city": "Mexico",
+    "name": "Santa Cruz",
+    "latitude": "15.111251136149557",
+    "longitude": "120.70348781498471"
+  },
+  {
+    "city": "Mexico",
+    "name": "Santa Maria",
+    "latitude": "15.059313336880455",
+    "longitude": "120.77266424749183"
+  },
+  {
+    "city": "Mexico",
+    "name": "Santo Domingo",
+    "latitude": "15.07818056791942",
+    "longitude": "120.74982868765701"
+  },
+  {
+    "city": "Mexico",
+    "name": "Santo Rosario",
+    "latitude": "15.06726615742744",
+    "longitude": "120.72846541351636"
+  },
+  {
+    "city": "Mexico",
+    "name": "Sapang Maisac",
+    "latitude": "15.184274684130278",
+    "longitude": "120.62823172995843"
+  },
+  {
+    "city": "Mexico",
+    "name": "Suclaban",
+    "latitude": "15.13524464933469",
+    "longitude": "120.64263668549142"
+  },
+  {
+    "city": "Mexico",
+    "name": "Tangle",
+    "latitude": "15.163343915528095",
+    "longitude": "120.64934964467595"
+  },
+  {
+    "city": "Minalin",
+    "name": "Bulac",
+    "latitude": "14.950673085684144",
+    "longitude": "120.67277258424967"
+  },
+  {
+    "city": "Minalin",
+    "name": "Dawe",
+    "latitude": "14.947201944622845",
+    "longitude": "120.68609114649436"
+  },
+  {
+    "city": "Minalin",
+    "name": "Lourdes",
+    "latitude": "14.96436006695317",
+    "longitude": "120.7290289455154"
+  },
+  {
+    "city": "Minalin",
+    "name": "Maniango",
+    "latitude": "14.929779226475752",
+    "longitude": "120.66328870792535"
+  },
+  {
+    "city": "Minalin",
+    "name": "San Francisco 1st",
+    "latitude": "14.951760493163551",
+    "longitude": "120.66176449672561"
+  },
+  {
+    "city": "Minalin",
+    "name": "San Francisco 2nd",
+    "latitude": "14.958574651913874",
+    "longitude": "120.67436363524834"
+  },
+  {
+    "city": "Minalin",
+    "name": "San Isidro",
+    "latitude": "14.957207407709998",
+    "longitude": "120.70716051503166"
+  },
+  {
+    "city": "Minalin",
+    "name": "San Nicolas",
+    "latitude": "14.970071124149223",
+    "longitude": "120.68200423393067"
+  },
+  {
+    "city": "Minalin",
+    "name": "San Pedro",
+    "latitude": "14.975652040070619",
+    "longitude": "120.69617273862302"
+  },
+  {
+    "city": "Minalin",
+    "name": "Sta. Catalina",
+    "latitude": "14.96558943285863",
+    "longitude": "120.67046488083831"
+  },
+  {
+    "city": "Minalin",
+    "name": "Sta. Maria",
+    "latitude": "14.977153685510483",
+    "longitude": "120.73358437511"
+  },
+  {
+    "city": "Minalin",
+    "name": "Sta. Rita",
+    "latitude": "14.983050837859889",
+    "longitude": "120.69209217853566"
+  },
+  {
+    "city": "Minalin",
+    "name": "Sto. Domingo",
+    "latitude": "14.998672798515846",
+    "longitude": "120.73610438869686"
+  },
+  {
+    "city": "Minalin",
+    "name": "Sto. Rosario",
+    "latitude": "14.964047446511643",
+    "longitude": "120.68733299815521"
+  },
+  {
+    "city": "Minalin",
+    "name": "Saplad",
+    "latitude": "14.9313677643158",
+    "longitude": "120.6855500349428"
+  },
+  {
+    "city": "Porac",
+    "name": "Babo Pangulo",
+    "latitude": "15.085342052080394",
+    "longitude": "120.52771585309327"
+  },
+  {
+    "city": "Porac",
+    "name": "Babo Sacan",
+    "latitude": "15.066796038645274,",
+    "longitude": "120.54837626612391"
+  },
+  {
+    "city": "Porac",
+    "name": "Balubad",
+    "latitude": "15.039868158779582",
+    "longitude": "120.54565428773174"
+  },
+  {
+    "city": "Porac",
+    "name": "Calzadang Bayu",
+    "latitude": "15.103266730588068",
+    "longitude": "120.58216290930686"
+  },
+  {
+    "city": "Porac",
+    "name": "Camias",
+    "latitude": "15.049472699283129",
+    "longitude": "120.47094756874833"
+  },
+  {
+    "city": "Porac",
+    "name": "Cangatba",
+    "latitude": "15.079045283414056",
+    "longitude": "120.51881729316703"
+  },
+  {
+    "city": "Porac",
+    "name": "Diaz",
+    "latitude": "15.055418480342004",
+    "longitude": "120.54400927090907"
+  },
+  {
+    "city": "Porac",
+    "name": "Dolores",
+    "latitude": "15.12150740045432",
+    "longitude": "120.51051858693133"
+  },
+  {
+    "city": "Porac",
+    "name": "Jalung",
+    "latitude": "15.063230052566276",
+    "longitude": "120.53641105990938"
+  },
+  {
+    "city": "Porac",
+    "name": "Mancatian",
+    "latitude": "15.088291258479023",
+    "longitude": "120.54218739245756"
+  },
+  {
+    "city": "Porac",
+    "name": "Manibaug Libutad",
+    "latitude": "15.106943106136002",
+    "longitude": "120.56420199879511"
+  },
+  {
+    "city": "Porac",
+    "name": "Manibaug Paralaya",
+    "latitude": "15.115028280893037",
+    "longitude": "120.56380163554437"
+  },
+  {
+    "city": "Porac",
+    "name": "Manibaug Pasig",
+    "latitude": "15.110729476761772",
+    "longitude": "120.56707483524667"
+  },
+  {
+    "city": "Porac",
+    "name": "Manuali",
+    "latitude": "15.137555581985021",
+    "longitude": "120.47563392570153"
+  },
+  {
+    "city": "Porac",
+    "name": "Mitla Proper",
+    "latitude": "15.0748498440066",
+    "longitude": "120.5651869078519"
+  },
+  {
+    "city": "Porac",
+    "name": "Palat",
+    "latitude": "15.04713114581427",
+    "longitude": "120.53660244568881"
+  },
+  {
+    "city": "Porac",
+    "name": "Pias",
+    "latitude": "15.022460077263004",
+    "longitude": "120.55843655251643"
+  },
+  {
+    "city": "Porac",
+    "name": "Pio",
+    "latitude": "15.046290625517251",
+    "longitude": "120.51772773760382"
+  },
+  {
+    "city": "Porac",
+    "name": "Planas",
+    "latitude": "15.041479149108044",
+    "longitude": "120.50869092526638"
+  },
+  {
+    "city": "Porac",
+    "name": "Poblacion",
+    "latitude": "15.072350664212887",
+    "longitude": "120.53987019387998"
+  },
+  {
+    "city": "Porac",
+    "name": "Pulung Santol",
+    "latitude": "15.050719480541659",
+    "longitude": "120.56923611496845"
+  },
+  {
+    "city": "Porac",
+    "name": "Salu",
+    "latitude": "15.016759123812546",
+    "longitude": "120.54100636063642"
+  },
+  {
+    "city": "Porac",
+    "name": "San Jose Mitla",
+    "latitude": "15.054372270671363",
+    "longitude": "120.5662579967009"
+  },
+  {
+    "city": "Porac",
+    "name": "Sta. Cruz",
+    "latitude": "15.127369849145103",
+    "longitude": "120.55974613232418"
+  },
+  {
+    "city": "Porac",
+    "name": "Sepung Bulaon",
+    "latitude": "15.050676817294828",
+    "longitude": "120.54800301388622"
+  },
+  {
+    "city": "Porac",
+    "name": "Sinura",
+    "latitude": "15.114506371897038",
+    "longitude": "120.5765915476983"
+  },
+  {
+    "city": "Porac",
+    "name": "Villa Maria",
+    "latitude": "15.092906914245424",
+    "longitude": "120.43195519282705"
+  },
+  {
+    "city": "Porac",
+    "name": "Inararo",
+    "latitude": "15.050673406227181",
+    "longitude": "120.55400736028092"
+  },
+  {
+    "city": "Porac",
+    "name": "Sapang Uwak",
+    "latitude": "15.12405720986549",
+    "longitude": "120.4264109640863"
+  },
+  {
+    "city": "San Luis",
+    "name": "San Agustin",
+    "latitude": "15.028131766662511",
+    "longitude": "120.78194678613391"
+  },
+  {
+    "city": "San Luis",
+    "name": "San Carlos",
+    "latitude": "15.03416894612811",
+    "longitude": "120.76681517478042"
+  },
+  {
+    "city": "San Luis",
+    "name": "San Isidro",
+    "latitude": "15.022669573898549",
+    "longitude": "120.81988258751983"
+  },
+  {
+    "city": "San Luis",
+    "name": "San Jose",
+    "latitude": "15.004758439696678,",
+    "longitude": " 120.86854156019213"
+  },
+  {
+    "city": "San Luis",
+    "name": "San Juan",
+    "latitude": "15.053865563600265",
+    "longitude": "120.82228304932985"
+  },
+  {
+    "city": "San Luis",
+    "name": "San Nicolas",
+    "latitude": "15.038735022593915",
+    "longitude": "120.80619975448154"
+  },
+  {
+    "city": "San Luis",
+    "name": "San Roque",
+    "latitude": "15.007831876904184",
+    "longitude": "120.83560905813626"
+  },
+  {
+    "city": "San Luis",
+    "name": "San Sebastian",
+    "latitude": "15.047238511508839",
+    "longitude": "120.79081684215232"
+  },
+  {
+    "city": "San Luis",
+    "name": "Santa Catalina",
+    "latitude": "15.064552116959609",
+    "longitude": "120.79775046830663"
+  },
+  {
+    "city": "San Luis",
+    "name": "Santa Cruz Pambilog",
+    "latitude": "15.06980587273102",
+    "longitude": "120.80751889228672"
+  },
+  {
+    "city": "San Luis",
+    "name": "Santa Cruz Poblacion",
+    "latitude": "15.038847936148246",
+    "longitude": "120.7920335055377"
+  },
+  {
+    "city": "San Luis",
+    "name": "Santa Lucia",
+    "latitude": "15.046934624731668",
+    "longitude": "120.77624829789757"
+  },
+  {
+    "city": "San Luis",
+    "name": "Santa Monica",
+    "latitude": "15.023789958872813",
+    "longitude": "120.80086371962638"
+  },
+  {
+    "city": "San Luis",
+    "name": "Santa Rita",
+    "latitude": "15.034037579587444",
+    "longitude": "120.77678601851073"
+  },
+  {
+    "city": "San Luis",
+    "name": "Santo Nino",
+    "latitude": "15.013476083459407",
+    "longitude": "120.86124296056666"
+  },
+  {
+    "city": "San Luis",
+    "name": "Santo Rosario",
+    "latitude": "15.057473489347638",
+    "longitude": "120.78394352356007"
+  },
+  {
+    "city": "San Luis",
+    "name": "Santo Tomas",
+    "latitude": "15.042051829222194",
+    "longitude": "120.7832322560711"
+  },
+  {
+    "city": "San Simon",
+    "name": "Concepcion",
+    "latitude": "15.000188734399707",
+    "longitude": "120.85397604601953"
+  },
+  {
+    "city": "San Simon",
+    "name": "De La Paz",
+    "latitude": "15.018266227496675",
+    "longitude": "120.7324115830852"
+  },
+  {
+    "city": "San Simon",
+    "name": "San Juan",
+    "latitude": "14.996931536874868",
+    "longitude": "120.77139450812633"
+  },
+  {
+    "city": "San Simon",
+    "name": "San Agustin",
+    "latitude": "14.983385753817869",
+    "longitude": "120.75031822255065"
+  },
+  {
+    "city": "San Simon",
+    "name": "San Isidro",
+    "latitude": "15.006674088767804",
+    "longitude": "120.74436057049205"
+  },
+  {
+    "city": "San Simon",
+    "name": "San Jose",
+    "latitude": "14.990225269205375",
+    "longitude": "120.7764033819612"
+  },
+  {
+    "city": "San Simon",
+    "name": "San Miguel",
+    "latitude": "14.994088135867395",
+    "longitude": "120.80961131272117"
+  },
+  {
+    "city": "San Simon",
+    "name": "San Nicolas",
+    "latitude": "15.020964468497386",
+    "longitude": "120.78489773859773"
+  },
+  {
+    "city": "San Simon",
+    "name": "San Pablo Libutad",
+    "latitude": "15.028629678975493",
+    "longitude": "120.74261611350818"
+  },
+  {
+    "city": "San Simon",
+    "name": "San Pablo Proper",
+    "latitude": "15.025963885036791",
+    "longitude": "120.75514965574786"
+  },
+  {
+    "city": "San Simon",
+    "name": "San Pedro",
+    "latitude": "15.01348432140452",
+    "longitude": "120.7663210341854"
+  },
+  {
+    "city": "San Simon",
+    "name": "Santa Cruz",
+    "latitude": "15.004013813725116",
+    "longitude": "120.79009243746617"
+  },
+  {
+    "city": "San Simon",
+    "name": "Santa Monica",
+    "latitude": "14.988939401097104",
+    "longitude": "120.75459694397995"
+  },
+  {
+    "city": "San Simon",
+    "name": "Santo Nino",
+    "latitude": "14.983544354759873",
+    "longitude": "120.76529227853594"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "San Agustin",
+    "latitude": "15.104950548019756",
+    "longitude": "120.74414607972696"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "San Bartolome",
+    "latitude": "15.100224590045688",
+    "longitude": "120.76572462409669"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "San Isidro",
+    "latitude": "15.115239717291278",
+    "longitude": "120.77365674684533"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "San Joaquin",
+    "latitude": "15.094044528707615",
+    "longitude": "120.75722421451194"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "San Jose",
+    "latitude": "15.086394189343276",
+    "longitude": "120.77367841183865"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "San Juan",
+    "latitude": "15.087108483027675",
+    "longitude": "120.76156337153762"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "San Nicolas",
+    "latitude": "15.096117192537797",
+    "longitude": "120.78209147920839"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "San Pablo",
+    "latitude": "15.136168164882525",
+    "longitude": "120.71011445157116"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "San Pedro",
+    "latitude": "15.080048209772825",
+    "longitude": "120.76546098051502"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "San Roque",
+    "latitude": "15.123183280119761",
+    "longitude": "120.72695952069029"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "Santa Lucia",
+    "latitude": "15.094434116603908",
+    "longitude": "120.78469748334578"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "Santa Maria",
+    "latitude": "15.067858915791723",
+    "longitude": "120.78015494454158"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "Santiago",
+    "latitude": "15.10843382027303",
+    "longitude": "120.76562306491596"
+  },
+  {
+    "city": "Santa Ana",
+    "name": "Santo Rosario",
+    "latitude": "15.120744641909447",
+    "longitude": "120.74255088565238"
+  },
+  {
+    "city": "Santa Rita",
+    "name": "Becuran",
+    "latitude": "15.007773796291271",
+    "longitude": "120.59487936718432"
+  },
+  {
+    "city": "Santa Rita",
+    "name": "Dila-dila",
+    "latitude": "15.017895895410929",
+    "longitude": "120.57975523650778"
+  },
+  {
+    "city": "Santa Rita",
+    "name": "San Agustin",
+    "latitude": "14.990977634675836",
+    "longitude": "120.60067238049906"
+  },
+  {
+    "city": "Santa Rita",
+    "name": "San Basilio",
+    "latitude": "15.034404176569387",
+    "longitude": "120.58870519905125"
+  },
+  {
+    "city": "Santa Rita",
+    "name": "San Isidro",
+    "latitude": "15.016044423482588",
+    "longitude": "120.60582799787058"
+  },
+  {
+    "city": "Santa Rita",
+    "name": "San Jose",
+    "latitude": "15.000539197105565",
+    "longitude": "120.61576168709506"
+  },
+  {
+    "city": "Santa Rita",
+    "name": "San Juan",
+    "latitude": "15.0087386284491",
+    "longitude": "120.62271586265824"
+  },
+  {
+    "city": "Santa Rita",
+    "name": "San Matias",
+    "latitude": "15.002294328701312",
+    "longitude": "120.6058659626565"
+  },
+  {
+    "city": "Santa Rita",
+    "name": "San Vicente",
+    "latitude": "14.997673408078949",
+    "longitude": "120.61478732058735"
+  },
+  {
+    "city": "Santa Rita",
+    "name": "Santa Monica",
+    "latitude": "14.993491864494185",
+    "longitude": "120.61008104528995"
+  },
+  {
+    "city": "Sto. Tomas",
+    "name": "Moras De La Paz",
+    "latitude": "15.014773370394945",
+    "longitude": "120.70749500268906"
+  },
+  {
+    "city": "Sto. Tomas",
+    "name": "Poblacion",
+    "latitude": "14.985973106853777",
+    "longitude": "120.71385868910893"
+  },
+  {
+    "city": "Sto. Tomas",
+    "name": "San Bartolome",
+    "latitude": "14.981817540886954",
+    "longitude": "120.70762035841675"
+  },
+  {
+    "city": "Sto. Tomas",
+    "name": "San Matias",
+    "latitude": "14.9996402661567",
+    "longitude": "120.71966678770885"
+  },
+  {
+    "city": "Sto. Tomas",
+    "name": "San Vicente",
+    "latitude": "14.991534921908144",
+    "longitude": "120.70360362664817"
+  },
+  {
+    "city": "Sto. Tomas",
+    "name": "Santo Rosario",
+    "latitude": "15.018554778289316",
+    "longitude": "120.72283123679657"
+  },
+  {
+    "city": "Sto. Tomas",
+    "name": "Sapa",
+    "latitude": "15.006465894721645",
+    "longitude": "120.70209840312602"
+  },
+  {
+    "city": "Sasmuan",
+    "name": "Batang 1st",
+    "latitude": "14.832627764706016",
+    "longitude": "120.616437129526"
+  },
+  {
+    "city": "Sasmuan",
+    "name": "Batang 2nd",
+    "latitude": "14.812789883843722",
+    "longitude": "120.61260488977845"
+  },
+  {
+    "city": "Sasmuan",
+    "name": "Mabuanbuan",
+    "latitude": "14.83019233774865",
+    "longitude": "120.60669998636786"
+  },
+  {
+    "city": "Sasmuan",
+    "name": "Malusac",
+    "latitude": "14.867272245328758",
+    "longitude": "120.62858673054541"
+  },
+  {
+    "city": "Sasmuan",
+    "name": "Sta. Lucia",
+    "latitude": "14.936769188986482",
+    "longitude": "120.61720750432926"
+  },
+  {
+    "city": "Sasmuan",
+    "name": "San Antonio",
+    "latitude": "14.898259919018018",
+    "longitude": "120.61602732163222"
+  },
+  {
+    "city": "Sasmuan",
+    "name": "San Nicolas 1st",
+    "latitude": "14.943292437443162",
+    "longitude": "120.61667249980538"
+  },
+  {
+    "city": "Sasmuan",
+    "name": "San Nicolas 2nd",
+    "latitude": "14.940591036986348",
+    "longitude": "120.62119139252216"
+  },
+  {
+    "city": "Sasmuan",
+    "name": "San Pedro",
+    "latitude": "14.939064103670498",
+    "longitude": "120.62720691569838"
+  },
+  {
+    "city": "Sasmuan",
+    "name": "Santa Monica",
+    "latitude": "14.918229099646085",
+    "longitude": "120.6372061054449"
+  },
+  {
+    "city": "Sasmuan",
+    "name": "Santo Tomas",
+    "latitude": "14.951384925467941",
+    "longitude": "120.62269071714216"
+  },
+  {
+    "city": "Sasmuan",
+    "name": "Sebitanan",
+    "latitude": "14.85602958389002",
+    "longitude": "120.6140467739164"
+  }
+]
