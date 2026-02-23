@@ -5,17 +5,24 @@ namespace App\Jobs;
 use App\Models\Boundary;
 use App\Models\Flooded;
 use App\Models\Noah;
+use App\Models\Weather;
+use App\Jobs\ComputeFloodedPolygonJob;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Foundation\Queue\Queueable;
+use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Queue\SerializesModels;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Cache;
 
 class ComputeFloodRiskJob implements ShouldQueue
 {
-    use Queueable;
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    private $weather;
-    public function __construct($weather)
+    public $weather;
+
+    public function __construct(Weather $weather)
     {
         $this->weather = $weather;
     }
@@ -26,7 +33,7 @@ class ComputeFloodRiskJob implements ShouldQueue
     public function handle(): void
     {
         //Search Barangay GID from Boundaries
-        $rainfall = $this->weather['accumulated_rainfall'];
+        $rainfall = $this->weather->runoff;
         $barangay = $this->weather->barangay;
         $barangayName = $barangay->name;
         $barangayCity = $barangay->city;
@@ -34,7 +41,7 @@ class ComputeFloodRiskJob implements ShouldQueue
         $gid = null;
 
         if($barangay){
-            $match = Boundary::query()
+            $match = Boundary::on('gis_data')
                 ->whereRaw('LOWER(adm2_en) ILIKE ?', ['%' . strtolower($barangayProvince) . '%'])
                 ->whereRaw('LOWER(adm4_en) ILIKE ?', ['%' . strtolower($barangayName) . '%'])
                 ->whereRaw('LOWER(adm3_en) ILIKE ?', ['%' . strtolower($barangayCity) . '%'])
@@ -44,22 +51,73 @@ class ComputeFloodRiskJob implements ShouldQueue
             }
         }
 
-        // Get intersecting floods
-        $barangayEWKB = DB::table('pampanga_boundary')
-            ->where('gid', $gid)
-            ->selectRaw('ST_AsEWKB(geom) as geom')
-            ->value('geom');
+        if ($gid === null) {
+            Log::warning('No boundary gid match for barangay; skipping flood polygon compute.', [
+                'barangay_id' => $this->weather->barangay_id,
+                'barangay' => $barangay ? [
+                    'name' => $barangayName,
+                    'city' => $barangayCity,
+                    'province' => $barangayProvince,
+                ] : null,
+            ]);
 
-        $floods = Noah::query()
-            ->whereRaw('ST_Intersects(geom, ?)', [$barangayEWKB])
+            Flooded::updateOrCreate(
+                ['barangay_id' => $this->weather->barangay_id],
+                [
+                    'reported_at' => now(),
+                    'accumulated_rainfall' => $rainfall,
+                    'risk_level' => 0,
+                    'rwr_score' => 0,
+                    'flooded_polygon' => null,
+                ]
+            );
+
+            return;
+        }
+
+        // Get floods whose polygons are fully contained within the barangay
+        $barangayWKT = DB::connection('gis_data')->table('pampanga_boundary')
+            ->where('gid', $gid)
+            ->selectRaw('ST_AsText(geom) as geom_wkt')
+            ->value('geom_wkt');
+
+        if (empty($barangayWKT)) {
+            Log::warning('Boundary WKT not found; skipping flood polygon compute.', [
+                'barangay_id' => $this->weather->barangay_id,
+                'gid' => $gid,
+            ]);
+
+            Flooded::updateOrCreate(
+                ['barangay_id' => $this->weather->barangay_id],
+                [
+                    'reported_at' => now(),
+                    'accumulated_rainfall' => $rainfall,
+                    'risk_level' => 0,
+                    'rwr_score' => 0,
+                    'flooded_polygon' => null,
+                ]
+            );
+
+            return;
+        }
+
+        // Normalize SRIDs when testing intersection. Some flood geometry rows
+        // are stored without an SRID (0), which causes "mixed SRID" errors.
+        // We construct the boundary geom from WKT (assumed EPSG:4326) and compare
+        // against the flood table geometry with an explicit SRID set to 4326.
+        // This avoids ST_Intersects errors when the stored SRID is 0.
+        $floods = Noah::on('gis_data')
+            ->whereRaw(
+                'ST_Within(ST_SetSRID(geom, 4326), ST_GeomFromText(?, 4326))',
+                [$barangayWKT]
+            )
             ->selectRaw('gid, var, ST_AsGeoJSON(geom) as geom')
             ->get();
 
-        // Determine flood risk level based on RWR thresholds
-        $lowThreshold = 10;
-        $mediumThreshold = 15;
-        $highThreshold = 20;
-        $highestRisk = 'None';
+        $lowThreshold = 20;
+        $mediumThreshold = 40;
+        $highThreshold = 60;
+        $highestRisk = 0;
         $floodData = [];
 
         foreach ($floods as $flood) {
@@ -68,36 +126,73 @@ class ComputeFloodRiskJob implements ShouldQueue
 
             if ($rwr >= $highThreshold) {
                 $riskLevel = 3;
-                $highestRisk = 'High';
+                $highestRisk = 3;
             } elseif ($rwr >= $mediumThreshold) {
                 $riskLevel = max($riskLevel ?? 0, 2);
-                if ($highestRisk !== 'High') $highestRisk = 'Medium';
+                if ($highestRisk < 2) $highestRisk = 2;
             } elseif ($rwr >= $lowThreshold) {
-                $riskLevel = max($riskLevel ?? 0, 1); // Low
-                if (!in_array($highestRisk, ['High', 'Medium'])) $highestRisk = 'Low';
+                $riskLevel = max($riskLevel ?? 0, 1);
+                if ($highestRisk < 1) $highestRisk = 1;
             }
 
             if ($riskLevel) {
                 $floodData[] = [
                     'gid' => $flood->gid,
-                    'rwr' => $rwr,
+                    'rwr_score' => $rwr,
                     'risk_level' => $riskLevel,
                 ];
             }
         }
 
-        Log::info('Flood Data:', ['floodData' => $floodData]);
-
+        // Persist Flooded summary. If there are flood matches, store them;
+        // otherwise mark the barangay as not flooded (risk_level = 0)
+        // and clear any previous flooded polygon.
         if (!empty($floodData)) {
+            // Upsert by barangay_id so reruns update the latest record.
             Flooded::updateOrCreate(
                 ['barangay_id' => $this->weather['barangay_id']],
                 [
-                    'risk_level' => $highestRisk,
                     'reported_at' => now(),
                     'accumulated_rainfall' => $rainfall,
+                    'risk_level' => $highestRisk,
+                    'rwr_score' => (function($data) {
+                        $vals = array_column($data, 'rwr_score');
+                        if (empty($vals)) return 0;
+                        $max = max($vals);
+                        return is_numeric($max) ? $max : 0;
+                    })($floodData),
                     'flooded_polygon' => json_encode($floodData),
                 ]
             );
+
+            // Increment the expected counter for polygon jobs and then dispatch
+            // the per-barangay ComputeFloodedPolygonJob. We only do this when
+            // there is actual flood geometry to compute to avoid empty jobs.
+            try {
+                $newExpected = Cache::increment('compute_flooded_expected');
+                Log::info('Incremented compute_flooded_expected', [
+                    'expected' => $newExpected,
+                    'barangay_id' => $this->weather['barangay_id'],
+                ]);
+            } catch (\Exception $e) {
+                Log::error('Failed to increment compute_flooded_expected', ['error' => $e->getMessage(), 'barangay_id' => $this->weather['barangay_id']]);
+            }
+
+            Log::info('Dispatching ComputeFloodedPolygonJob', ['barangay_id' => $this->weather['barangay_id'], 'flood_count' => count($floodData)]);
+            ComputeFloodedPolygonJob::dispatch($this->weather->barangay_id, $floodData);
+        }
+        else {
+            Flooded::updateOrCreate(
+                ['barangay_id' => $this->weather['barangay_id']],
+                [
+                    'reported_at' => now(),
+                    'accumulated_rainfall' => $rainfall,
+                    'risk_level' => 0,
+                    'rwr_score' => 0,
+                    'flooded_polygon' => null,
+                ]
+            );
+            Log::info('No floods detected; set risk_level=0 and cleared flooded_polygon', ['barangay_id' => $this->weather['barangay_id']]);
         }
     }
 }

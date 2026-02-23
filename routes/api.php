@@ -9,10 +9,31 @@ use Clickbar\Magellan\Database\PostgisFunctions\ST;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SafeRouteController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FloodNearbyController;
+use App\Http\Controllers\CommunityFloodReportController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
+
+Route::prefix('auth')->group(function () {
+    Route::post('/register', [AuthController::class, 'register'])->middleware('throttle:auth');
+    Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:auth');
+    Route::post('/forgot-password', [AuthController::class, 'forgotPassword'])->middleware('throttle:auth');
+    Route::post('/reset-password', [AuthController::class, 'resetPassword'])->middleware('throttle:auth');
+    Route::post('/forgot-password-otp', [AuthController::class, 'forgotPasswordOtp'])->middleware('throttle:auth');
+    Route::post('/reset-password-otp', [AuthController::class, 'resetPasswordOtp'])->middleware('throttle:auth');
+
+    Route::middleware('auth:sanctum')->group(function () {
+        Route::get('/me', [AuthController::class, 'me']);
+        Route::put('/profile', [AuthController::class, 'updateProfile']);
+        Route::delete('/account', [AuthController::class, 'deleteAccount']);
+        Route::post('/logout', [AuthController::class, 'logout']);
+        Route::post('/logout-all', [AuthController::class, 'logoutAll']);
+    });
+});
 
 //Barangay Routes
 Route::get('/barangay', [\App\Http\Controllers\BarangayController::class, 'getAllBarangay']);
@@ -24,82 +45,27 @@ Route::post('/barangay', [\App\Http\Controllers\BarangayController::class, 'crea
 Route::put('/barangay/{id}', [\App\Http\Controllers\BarangayController::class, 'updateBarangay']);
 Route::delete('/barangay/{id}', [\App\Http\Controllers\BarangayController::class, 'deleteBarangay']);
 //End of Barangay Routes
-Route::get('/find-polygon', function () {
-    $lat = 15.065303;
-    $lon = 120.720766;
+
+// Simulation endpoint for posting synthetic weather JSON
+Route::post('/simulate-weather', [\App\Http\Controllers\SimulationController::class, 'simulate']);
 
 
+// Safe routing endpoint (POST) used by Flutter client
+Route::post('/route/safe', [SafeRouteController::class, 'route']);
 
-    $point = Point::makeGeodetic($lat, $lon);
+// Flood proximity check (GET) used by mobile client
+Route::get('/flood/nearby', [FloodNearbyController::class, 'nearby']);
 
-    $polygon = Noah::query()
-        ->whereRaw(ST::contains('geom', $point))
-        ->first(); // Use get() if expecting multiple polygons
+// Community-based flood reporting (GET nearby segments)
+Route::get('/flood/community-report/nearby', [CommunityFloodReportController::class, 'nearby'])
+    ->middleware('auth:sanctum');
 
-    if ($polygon) {
-        return response()->json($polygon);
-    }
+// Community-based flood reporting (GET all flooded road segments)
+Route::get('/flood/community-report/flooded-roads', [CommunityFloodReportController::class, 'index'])
+    ->middleware('auth:sanctum');
 
-    return response()->json(['message' => 'No polygon contains this point']);
-});
+// Community-based flood reporting (POST) used by mobile client
+Route::post('/flood/community-report', [CommunityFloodReportController::class, 'store'])
+    ->middleware('auth:sanctum');
 
-Route::get('/floods-in-barangay/{gid}', function ($gid) {
-    // 1️ Fetch barangay as EWKB
-    $barangayEWKB = DB::table('pampanga_boundary')
-        ->where('gid', $gid)
-        ->selectRaw('ST_AsEWKB(geom) as geom')
-        ->value('geom');
-
-    if (!$barangayEWKB) {
-        return response()->json(['message' => 'Barangay not found']);
-    }
-
-    // 2️ Get intersecting floods
-    $floods = Noah::query()
-        ->whereRaw('ST_Intersects(geom, ?)', [$barangayEWKB])
-        ->selectRaw('gid, var, ST_AsGeoJSON(geom) as geom')
-        ->get();
-
-    // 3️ Convert to GeoJSON FeatureCollection
-    $features = $floods->map(function ($flood) {
-        return [
-            'type' => 'Feature',
-            'geometry' => json_decode($flood->geom),
-            'properties' => [
-                'gid' => $flood->gid,
-                'var' => $flood->var,
-            ],
-        ];
-    });
-
-    $geojson = [
-        'type' => 'FeatureCollection',
-        'features' => $features,
-    ];
-    return $floods;
-});
-
-Route::get('/boundaries', function () {
-    $searchBarangay = 'San Jose';
-    $searchCity = 'San Fernando';
-
-    $matches = Boundary::query()
-        ->where('adm2_en', 'Pampanga')
-        ->whereRaw('LOWER(adm4_en) ILIKE ?', ['%' . strtolower($searchBarangay) . '%'])
-        ->whereRaw('LOWER(adm3_en) ILIKE ?', ['%' . strtolower($searchCity) . '%'])
-        ->get();
-
-    if ($matches->isEmpty()) {
-        return response()->json(['message' => 'No matching boundaries found']);
-    }
-    return $matches->first()->gid;
-});
-
-//Risk Areas
-//Disaster Reports
-//Evacuation Centers
-//User Management
-//Notifications
-//Analytics
-//Settings
-//Support and Feedback
+Route::get('/report-flooded-barangay', [\App\Http\Controllers\DisasterReportsController::class, 'getAllFloodedBarangays']);

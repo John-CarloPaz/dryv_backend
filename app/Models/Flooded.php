@@ -12,6 +12,7 @@ class Flooded extends Model
         'reported_at',
         'risk_level',
         'accumulated_rainfall',
+        'rwr_score',
         'flooded_polygon',
     ];
 

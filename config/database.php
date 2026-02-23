@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('APP_DB_CONNECTION', env('DB_CONNECTION', 'pgsql')),
 
     /*
     |--------------------------------------------------------------------------
@@ -30,6 +30,30 @@ return [
     */
 
     'connections' => [
+
+        /*
+        |--------------------------------------------------------------------------
+        | Application DB (for Laravel migrations)
+        |--------------------------------------------------------------------------
+        |
+        | Use this connection for Laravel-managed tables/migrations. Set
+        | `DB_CONNECTION=app` in your `.env` to run migrations against this DB.
+        |
+        */
+        'pgsql' => [
+            'driver' => 'pgsql',
+            'url' => env('APP_DB_URL', env('DB_URL')),
+            'host' => env('APP_DB_HOST', env('DB_HOST', '127.0.0.1')),
+            'port' => env('APP_DB_PORT', env('DB_PORT', '5432')),
+            'database' => env('APP_DB_DATABASE', env('DB_DATABASE', 'laravel')),
+            'username' => env('APP_DB_USERNAME', env('DB_USERNAME', '')),
+            'password' => env('APP_DB_PASSWORD', env('DB_PASSWORD', '')),
+            'charset' => env('APP_DB_CHARSET', 'utf8'),
+            'prefix' => env('APP_DB_PREFIX', ''),
+            'prefix_indexes' => true,
+            'schema' => env('APP_DB_SCHEMA', 'public'),
+            'sslmode' => env('APP_DB_SSLMODE', 'prefer'),
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',
@@ -83,7 +107,7 @@ return [
             ]) : [],
         ],
 
-        'pgsql' => [
+        'gis_data' => [
             'driver' => 'pgsql',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),

@@ -13,11 +13,13 @@ return new class extends Migration
     {
         Schema::create('floodeds', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->foreignId("barangay_id");
-            $table->dateTime("reported_at");
-            $table->string("risk_level");
+            $table->integer("risk_level");
+            $table->double('rwr_score');
             $table->float("accumulated_rainfall")->default(0);
+            $table->json('flooded_polygon')->nullable();
+            $table->dateTime("reported_at");
+            $table->timestamps();
         });
     }
 

@@ -17,6 +17,12 @@ return [
     'openweather' => [
         'key' => env('OPEN_WEATHER_API_KEY'),
     ],
+    'mapbox' => [
+        'token' => env('MAPBOX_ACCESS_TOKEN'),
+        'username' => env('MAPBOX_USERNAME'),
+        'dataset_id' => env('MAPBOX_DATASET_ID'),
+        'tileset_id' => env('MAPBOX_TILESET_ID'),
+    ],
 
     'postmark' => [
         'token' => env('POSTMARK_TOKEN'),
@@ -24,6 +30,13 @@ return [
 
     'resend' => [
         'key' => env('RESEND_KEY'),
+    ],
+
+    'brevo' => [
+        'api_key' => env('BREVO_API_KEY'),
+        'sender_email' => env('BREVO_SENDER_EMAIL', env('MAIL_FROM_ADDRESS')),
+        'sender_name' => env('BREVO_SENDER_NAME', env('MAIL_FROM_NAME')),
+        'api_url' => env('BREVO_API_URL', 'https://api.brevo.com/v3'),
     ],
 
     'ses' => [

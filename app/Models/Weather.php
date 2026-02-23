@@ -10,6 +10,18 @@ class Weather extends Model
     protected $fillable = [
         'barangay_id',
         'data',
+        'si_score',
+        'accumulated_rainfall',
+        'ave_pop_percentage',
+        'solar_irradiance',
+        'temp_min',
+        'temp_max',
+        'temp_avg',
+        'hargreaves_index',
+        'runoff',
+        'hargreaves_hourly',
+        'ave_pop_percentage',
+        'soil_moisture',
         'fetched_at',
     ];
 

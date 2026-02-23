@@ -14,7 +14,7 @@ Dryv Backend exposes a REST API that:
 1. Collects rainfall and weather data.
 2. Calculates flood probability based on rainfall accumulation and flood polygons.
 3. Updates a flood risk table in PostgreSQL.
-4. Intercepts route requests and reroutes through safe paths using Mapbox Directions API.
+4. Intercepts route requests and reroutes through safe paths using a pgRouting-based road graph with Mapbox Directions as a fallback.
 
 ---
 
@@ -36,7 +36,7 @@ Dryv Backend exposes a REST API that:
 | ----------------- | ---------------------------------------- |
 | Language          | PHP 8 / Laravel 12                       |
 | Database          | PostgreSQL 15 + PostGIS                  |
-| Map & Routing     | Mapbox Directions & Map Matching API     |
+| Map & Routing     | pgRouting + Mapbox Directions API        |
 | Flood Data Source | Project NOAH Database                    |
 | Weather APIs      | Open-Meteo, OpenWeather                  |
 | Queue / Jobs      | Laravel Queues (Redis / Database driver) |
@@ -93,7 +93,7 @@ Dryv Backend exposes a REST API that:
 | `GET`  | `/api/weather/sync`             | Fetch rainfall data from Open-Meteo & OpenWeather |
 | `POST` | `/api/floods/compute`           | Compute flood risk & update flooded table         |
 | `GET`  | `/api/floods/in-boundary/{gid}` | Return flooded roads within a barangay            |
-| `GET`  | `/api/route`                    | Generate safe route avoiding flooded roads        |
+| `POST` | `/api/route/safe`               | Graph-based safe routing (with Mapbox fallback)   |
 | `GET`  | `/api/floods`                   | Get all current flood polygons                    |
 | `GET`  | `/api/status`                   | Health check for system uptime                    |
 

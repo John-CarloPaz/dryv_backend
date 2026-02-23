@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string("province");
             $table->string("country")->default("Philippines");
             $table->string("country_code")->default("PH");
+            $table->unique(['city', 'name']);
         });
     }
 

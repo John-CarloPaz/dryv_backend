@@ -24,4 +24,9 @@ class Barangay extends Model
         return $this->hasOne(Flooded::class);
     }
 
+    public function floods(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(FloodedGeometry::class);
+    }
+
 }

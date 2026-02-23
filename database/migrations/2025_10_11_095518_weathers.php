@@ -13,11 +13,21 @@ return new class extends Migration
     {
         Schema::create('weathers', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->foreignId("barangay_id");
-            $table->json("data");
-            $table->dateTime("fetched_at");
+            $table->json("data")->nullable();
+            $table->double('solar_irradiance')->default(0.0);
+            $table->double('temp_min')->default(0.0);
+            $table->double('temp_max')->default(0.0);
+            $table->double('temp_avg')->default(0.0);
+            $table->double('hargreaves_index')->default(0.0);
+            $table->double('hargreaves_hourly')->default(0.0);
             $table->double("accumulated_rainfall")->default(0);
+            $table->double('soil_moisture')->default(0.0);
+            $table->double('si_score')->default(0.0);
+            $table->double('runoff')->default(0.0);
+            $table->double('ave_pop_percentage')->default(0.0)->after('accumulated_rainfall')->nullable();
+            $table->dateTime("fetched_at");
+            $table->timestamps();
         });
     }
 
