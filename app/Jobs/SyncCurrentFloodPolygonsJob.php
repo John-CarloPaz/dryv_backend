@@ -58,6 +58,9 @@ class SyncCurrentFloodPolygonsJob implements ShouldQueue
                 );
             SQL);
 
+            // Spatial index for fast intersection checks during refresh/routing.
+            $gis->statement('CREATE INDEX IF NOT EXISTS current_flood_polygons_geom_gist ON current_flood_polygons USING GIST (geom)');
+
             // Rebuild the table from scratch so it always matches FloodedGeometry
             $gis->transaction(function () use ($gis, $gidRisk) {
                 $gis->statement('TRUNCATE TABLE current_flood_polygons');
@@ -79,6 +82,26 @@ class SyncCurrentFloodPolygonsJob implements ShouldQueue
                     }
                 }
             });
+
+            // If the routing graph uses a materialized road_edges_flooded, refresh it now.
+            try {
+                $kind = $gis->selectOne(
+                    "SELECT c.relkind AS kind\n" .
+                    "FROM pg_class c\n" .
+                    "JOIN pg_namespace n ON n.oid = c.relnamespace\n" .
+                    "WHERE n.nspname = 'public' AND c.relname = 'road_edges_flooded'\n" .
+                    "LIMIT 1"
+                );
+
+                if ($kind && ($kind->kind ?? null) === 'm') {
+                    $gis->statement('REFRESH MATERIALIZED VIEW road_edges_flooded');
+                    Log::info('SyncCurrentFloodPolygonsJob: refreshed road_edges_flooded materialized view');
+                }
+            } catch (\Throwable $e) {
+                Log::warning('SyncCurrentFloodPolygonsJob: unable to refresh road_edges_flooded', [
+                    'error' => $e->getMessage(),
+                ]);
+            }
 
             Log::info('SyncCurrentFloodPolygonsJob: current_flood_polygons rebuilt', [
                 'count' => count($gidRisk),

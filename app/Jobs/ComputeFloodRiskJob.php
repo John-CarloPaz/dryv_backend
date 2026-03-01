@@ -114,9 +114,9 @@ class ComputeFloodRiskJob implements ShouldQueue
             ->selectRaw('gid, var, ST_AsGeoJSON(geom) as geom')
             ->get();
 
-        $lowThreshold = 20;
-        $mediumThreshold = 40;
-        $highThreshold = 60;
+        $lowThreshold = 49.99;
+        $mediumThreshold = 599.99;
+        $highThreshold = 600.00;
         $highestRisk = 0;
         $floodData = [];
 

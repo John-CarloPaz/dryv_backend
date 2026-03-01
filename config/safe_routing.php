@@ -39,4 +39,15 @@ return [
     // Cache graph routing responses (seconds). Helps dramatically for repeat requests.
     // Set to 0 to disable.
     'graph_cache_ttl_seconds' => (int) env('SAFE_ROUTING_GRAPH_CACHE_TTL_SECONDS', 300),
+
+    // Safety/performance: cap how long a single pgRouting query can run (milliseconds).
+    // This prevents 60s PHP timeouts when the graph is large or disconnected.
+    // Set to 0 to disable.
+    'graph_db_statement_timeout_ms' => (int) env('SAFE_ROUTING_GRAPH_DB_STATEMENT_TIMEOUT_MS', 15000),
+
+    // Performance optimization for graph routing:
+    // Try routing within an expanding "corridor" (meters) around the straight line
+    // between start/end vertices, then fall back to the full graph if needed.
+    // Can be an array (in config cache) or a comma-separated string from env.
+    'graph_search_corridor_meters' => env('SAFE_ROUTING_GRAPH_SEARCH_CORRIDOR_METERS', '1500,4000,12000,30000'),
 ];

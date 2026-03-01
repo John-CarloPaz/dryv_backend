@@ -21,6 +21,7 @@ This document describes the flood-aware routing endpoint that integrates:
   "routing_profile": "driving",
   "vehicle_type": "car",          // car | motor | truck
   "avoid_motorway": true,
+  "toggle_community_report": true,
   "exclude": ["toll", "motorway"],
   "max_attempts": 5
 }
@@ -32,6 +33,9 @@ Notes:
   - Mapbox engine: supported.
   - Graph engine: supported **after installing the `gis_data` SQL overloads** (see `README_GRAPH_ROUTING.md`).
     If the overloads are missing, the backend returns “Motorway avoidance is not supported by the current graph routing database functions.”
+
+- `toggle_community_report` (default: `false`)
+  - When `true` and the graph engine is used, the route will also avoid community-reported flood segments, using the same vehicle risk rules as flooded polygons (car/motor avoid risk 2–3; truck avoid 3; walking avoids any risk).
 
 ### Response (Success)
 

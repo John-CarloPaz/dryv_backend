@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\FloodedGeometry;
+use App\Models\CommunityFloodRoadStat;
 use App\Models\Noah;
 use App\Models\Road;
 use App\Services\RoadRoutingService;
@@ -244,7 +245,7 @@ SQL;
         $this->roadRoutingService = $roadRoutingService;
     }
 
-    public function findSafeRoute(array $origin, array $destination, ?string $routingProfile = null, ?string $vehicleType = null, array $exclude = [], ?int $maxAttempts = null, ?bool $avoidMotorway = null): array
+    public function findSafeRoute(array $origin, array $destination, ?string $routingProfile = null, ?string $vehicleType = null, array $exclude = [], ?int $maxAttempts = null, ?bool $avoidMotorway = null, bool $toggleCommunityReport = false): array
     {
         $clientProfile = $routingProfile ?? 'driving';
         $vehicleType = $vehicleType ?? 'car';
@@ -272,6 +273,7 @@ SQL;
             'vehicle_type' => $vehicleType,
             'exclude' => $exclude,
             'avoid_motorway' => $effectiveAvoidMotorway,
+            'toggle_community_report' => $toggleCommunityReport,
             'max_attempts' => $maxAttempts,
             'engine' => config('safe_routing.engine'),
         ]);
@@ -291,6 +293,77 @@ SQL;
                     throw new RuntimeException('No road network found near origin or destination.');
                 }
 
+                // Optional: avoid community-reported flooded road segments.
+                // Rule parity with flooded polygons:
+                // - light vehicles (car/motor): allowed risk 1 -> avoid 2–3
+                // - heavy (truck): allowed risk 1–2 -> avoid 3
+                // - walking: avoid any risk > 0
+                $avoidCommunityReport = (bool) $toggleCommunityReport;
+                $blockedCommunitySegments = [];
+                $communityMaxLastReportedAt = null;
+                $communitySegmentsHash = 0;
+                $communitySegmentBinSizeM = (float) config('community_reporting.segment_bin_size_m', 100.0);
+
+                if ($avoidCommunityReport) {
+                    $vehicleTypeForBudget = strtolower(trim((string) $vehicleTypeNorm));
+                    $profileForBudget = strtolower(trim((string) $profileNorm));
+
+                    $maxRiskBudget = match (true) {
+                        $vehicleTypeForBudget === 'walking' || $profileForBudget === 'walking' => 0,
+                        $vehicleTypeForBudget === 'truck' => 2,
+                        default => 1,
+                    };
+
+                    $hours = (int) config('community_reporting.aggregation_window_hours', 24);
+                    $windowStart = now()->subHours(max(1, $hours));
+
+                    $rows = CommunityFloodRoadStat::query()
+                        ->where('reports_count', '>', 0)
+                        ->whereNotNull('last_reported_at')
+                        ->where('last_reported_at', '>=', $windowStart)
+                        ->where('risk_level', '>', $maxRiskBudget)
+                        ->select(['road_gid', 'segment_key', 'last_reported_at'])
+                        ->get();
+
+                    foreach ($rows as $r) {
+                        $roadGid = is_numeric($r->road_gid ?? null) ? (int) $r->road_gid : null;
+                        $segmentKey = is_numeric($r->segment_key ?? null) ? (int) $r->segment_key : null;
+                        if ($roadGid === null || $segmentKey === null) {
+                            continue;
+                        }
+
+                        $blockedCommunitySegments[] = [
+                            'road_gid' => $roadGid,
+                            'segment_key' => $segmentKey,
+                        ];
+
+                        $ts = $r->last_reported_at ?? null;
+                        if ($ts instanceof Carbon) {
+                            $communityMaxLastReportedAt = ($communityMaxLastReportedAt === null)
+                                ? $ts
+                                : ($ts->greaterThan($communityMaxLastReportedAt) ? $ts : $communityMaxLastReportedAt);
+                        }
+                    }
+
+                    // Stabilize ordering for consistent caching + DB input.
+                    usort($blockedCommunitySegments, static function (array $a, array $b): int {
+                        $aRoad = (int) ($a['road_gid'] ?? 0);
+                        $bRoad = (int) ($b['road_gid'] ?? 0);
+                        if ($aRoad !== $bRoad) {
+                            return $aRoad <=> $bRoad;
+                        }
+                        return ((int) ($a['segment_key'] ?? 0)) <=> ((int) ($b['segment_key'] ?? 0));
+                    });
+
+                    $hashJson = json_encode($blockedCommunitySegments, JSON_UNESCAPED_SLASHES);
+                    $communitySegmentsHash = is_string($hashJson) ? (int) crc32($hashJson) : 0;
+
+                    // If nothing is currently blocked, treat as disabled.
+                    if (count($blockedCommunitySegments) === 0) {
+                        $avoidCommunityReport = false;
+                    }
+                }
+
                 $ttlSeconds = (int) config('safe_routing.graph_cache_ttl_seconds', 0);
                 $graphTol = (float) config('safe_routing.graph_simplify_tolerance_m', 2);
                 $stepTol = (float) config('safe_routing.graph_step_simplify_tolerance_m', 1.5);
@@ -304,8 +377,15 @@ SQL;
                 $visualOffsetRoadRadiusM = (float) config('safe_routing.graph_visual_offset_nearest_road_radius_m', 80);
                 $visualOffsetOnewayCapM = (float) config('safe_routing.graph_visual_offset_oneway_cap_m', 0.0);
                 $visualSimplifyTolM = (float) config('safe_routing.graph_visual_simplify_tolerance_m', 0.6);
+
+                $communityCount = $avoidCommunityReport ? count($blockedCommunitySegments) : 0;
+                $communityMaxUnix = ($avoidCommunityReport && $communityMaxLastReportedAt instanceof Carbon)
+                    ? (int) $communityMaxLastReportedAt->timestamp
+                    : 0;
+                $communityHash = $avoidCommunityReport ? (int) $communitySegmentsHash : 0;
+
                 $cacheKey = sprintf(
-                    'safe_route_graph:v16:%s:%s:%d:%d:am%d:gt%.2f:st%.2f:mm%d:r%.0f:vo%.1f:%s:voc%.1f:vo1c%.1f:vs%.2f',
+                    'safe_route_graph:v18:%s:%s:%d:%d:am%d:gt%.2f:st%.2f:mm%d:r%.0f:vo%.1f:%s:voc%.1f:vo1c%.1f:vs%.2f:cr%d:crc%d:crm%d:crh%u',
                     $vehicleTypeNorm,
                     $profileNorm,
                     (int) $startVertex,
@@ -320,6 +400,10 @@ SQL;
                     $visualOffsetMinorCapM,
                     $visualOffsetOnewayCapM,
                     $visualSimplifyTolM,
+                    $avoidCommunityReport ? 1 : 0,
+                    $communityCount,
+                    $communityMaxUnix,
+                    $communityHash,
                 );
 
                 if ($ttlSeconds > 0) {
@@ -350,7 +434,79 @@ SQL;
                 }
 
                 $tRoute0 = microtime(true);
-                $route = $this->roadRoutingService->computeSafeRouteByVertices((int) $startVertex, (int) $endVertex, $vehicleTypeNorm, $profileNorm, (bool) $effectiveAvoidMotorway);
+
+                // Performance optimization: try routing within an expanding corridor first,
+                // then fall back to full-graph routing to preserve correctness.
+                $corridorList = config('safe_routing.graph_search_corridor_meters', [1500, 4000, 12000, 30000]);
+                if (is_string($corridorList)) {
+                    $corridorList = array_map('trim', explode(',', $corridorList));
+                }
+                if (!is_array($corridorList)) {
+                    $corridorList = [1500, 4000, 12000, 30000];
+                }
+
+                $corridors = [];
+                foreach ($corridorList as $v) {
+                    if (is_numeric($v)) {
+                        $m = (float) $v;
+                        if (is_finite($m) && $m > 0) {
+                            $corridors[] = $m;
+                        }
+                    }
+                }
+                $corridors = array_values(array_unique($corridors));
+                sort($corridors);
+
+                $attemptsUsed = 0;
+                $route = null;
+                $lastNoPath = null;
+
+                $plannedCorridors = ($maxAttempts > 1)
+                    ? array_slice($corridors, 0, max(0, $maxAttempts - 1))
+                    : [];
+
+                foreach ($plannedCorridors as $corridorM) {
+                    $attemptsUsed++;
+                    try {
+                        $route = $this->roadRoutingService->computeSafeRouteByVertices(
+                            (int) $startVertex,
+                            (int) $endVertex,
+                            $vehicleTypeNorm,
+                            $profileNorm,
+                            (bool) $effectiveAvoidMotorway,
+                            (float) $corridorM,
+                            $avoidCommunityReport,
+                            $blockedCommunitySegments,
+                            $communitySegmentBinSizeM,
+                        );
+                        break;
+                    } catch (RuntimeException $e) {
+                        $msg = strtolower($e->getMessage());
+                        // Only retry on "no path". Other errors should bubble up.
+                        if (str_contains($msg, 'no safe path') || str_contains($msg, 'timed out')) {
+                            $lastNoPath = $e;
+                            continue;
+                        }
+                        throw $e;
+                    }
+                }
+
+                if ($route === null) {
+                    $attemptsUsed++;
+                    // Final attempt: full graph (no corridor) to preserve identical behavior.
+                    $route = $this->roadRoutingService->computeSafeRouteByVertices(
+                        (int) $startVertex,
+                        (int) $endVertex,
+                        $vehicleTypeNorm,
+                        $profileNorm,
+                        (bool) $effectiveAvoidMotorway,
+                        null,
+                        $avoidCommunityReport,
+                        $blockedCommunitySegments,
+                        $communitySegmentBinSizeM,
+                    );
+                }
+
                 $tRoute1 = microtime(true);
 
                 $tGeom0 = microtime(true);
@@ -491,6 +647,8 @@ SQL;
                     $vehicleType,
                     $route['max_risk_level'] ?? null,
                     $geometryForSteps,
+                    $route['duration_s'] ?? null,
+                    $attemptsUsed,
                 );
 
                 if ($mapMatchMeta !== null) {
@@ -907,7 +1065,9 @@ SQL;
         string $clientProfile,
         string $vehicleType,
         ?int $maxRiskLevel,
-        ?array $stepsGeometryForClient = null
+        ?array $stepsGeometryForClient = null,
+        ?float $durationSFromGraph = null,
+        int $attempts = 1
     ): array {
         $mode = match (strtolower($clientProfile)) {
             'walking' => 'walking',
@@ -915,8 +1075,23 @@ SQL;
             default => 'driving',
         };
 
+        $durationS = (is_numeric($durationSFromGraph) && (float) $durationSFromGraph > 0)
+            ? (float) $durationSFromGraph
+            : null;
+
         $speedMps = $this->estimateSpeedMps($mode, $vehicleType);
-        $durationS = ($distanceM !== null && $speedMps > 0) ? ($distanceM / $speedMps) : null;
+        if ($mode === 'driving' && $durationS !== null && $distanceM !== null && $durationS > 0) {
+            // Use the DB-computed duration to derive an average speed so step durations match ETA.
+            $derived = $distanceM / $durationS;
+            if (is_finite($derived) && $derived > 0) {
+                // Guardrails: avoid absurd speeds from bad maxspeed data.
+                $speedMps = max(1.0, min(55.0, (float) $derived));
+            }
+        }
+
+        if ($durationS === null) {
+            $durationS = ($distanceM !== null && $speedMps > 0) ? ($distanceM / $speedMps) : null;
+        }
 
         $stepsGeometry = is_array($stepsGeometryForClient) ? $stepsGeometryForClient : $routeGeometryForClient;
 
@@ -980,7 +1155,7 @@ SQL;
             'uuid' => (string) Str::uuid(),
             '_meta' => [
                 'engine' => 'graph',
-                'attempts' => 1,
+                'attempts' => max(1, (int) $attempts),
                 'max_risk_level' => $maxRiskLevel,
                 'note' => 'Turn-by-turn steps generated by internal graph engine',
                 'risk_level' => $risk,
@@ -1854,7 +2029,16 @@ FROM line
 ";
 
         try {
-            $row = DB::connection('gis_data')->selectOne($sql, $bindings);
+            $gis = DB::connection('gis_data');
+            $timeoutMs = (int) config('safe_routing.graph_db_statement_timeout_ms', 0);
+            if ($timeoutMs > 0) {
+                $row = $gis->transaction(function () use ($gis, $sql, $bindings, $timeoutMs) {
+                    $gis->statement('SET LOCAL statement_timeout = ' . (int) $timeoutMs);
+                    return $gis->selectOne($sql, $bindings);
+                });
+            } else {
+                $row = $gis->selectOne($sql, $bindings);
+            }
         } catch (\Throwable $e) {
             Log::warning('SafeRoutingService: map-match query failed; returning original geometry', [
                 'error' => $e->getMessage(),
@@ -2286,13 +2470,16 @@ FROM line
     {
         $vehicleType = $vehicleType ?? 'car';
 
-        if ($vehicleType === 'motor' || in_array($routingProfile, ['walking', 'cycling'], true)) {
-            return collect();
-        }
+        // Block flooded polygon risk levels based on vehicle capability.
+        // - car/motor (light vehicles): can pass risk 1 → block 2–3
+        // - truck (heavy): can pass up to risk 2 → block 3
+        // - walking: should not pass any risk → block 1–3
+        $vehicleTypeNorm = strtolower(trim((string) $vehicleType));
+        $profileNorm = strtolower(trim((string) $routingProfile));
 
-        $blockedLevels = match ($vehicleType) {
-            
-            'car' => [2, 3],
+        $blockedLevels = match (true) {
+            $vehicleTypeNorm === 'walking' || $profileNorm === 'walking' => [1, 2, 3],
+            $vehicleTypeNorm === 'truck' => [3],
             default => [2, 3],
         };
 

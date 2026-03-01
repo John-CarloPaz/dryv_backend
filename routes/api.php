@@ -13,6 +13,7 @@ use App\Http\Controllers\SafeRouteController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\FloodNearbyController;
 use App\Http\Controllers\CommunityFloodReportController;
+use App\Http\Controllers\CrucialFacilityController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -55,6 +56,9 @@ Route::post('/route/safe', [SafeRouteController::class, 'route']);
 
 // Flood proximity check (GET) used by mobile client
 Route::get('/flood/nearby', [FloodNearbyController::class, 'nearby']);
+
+// Crucial facilities proximity (GET) used by mobile client
+Route::get('/crucial-facilities/nearest', [CrucialFacilityController::class, 'nearest']);
 
 // Community-based flood reporting (GET nearby segments)
 Route::get('/flood/community-report/nearby', [CommunityFloodReportController::class, 'nearby'])

@@ -36,20 +36,48 @@ class SafeRouteController extends Controller
         $vehicleType = $data['vehicle_type'] ?? 'car';
         $exclude = $data['exclude'] ?? [];
         $avoidMotorway = $data['avoid_motorway'] ?? null;
+        $avoidTolls = $data['avoid_tolls'] ?? null;
         $maxAttempts = $data['max_attempts'] ?? null;
+        $toggleCommunityReport = $data['toggle_community_report'] ?? false;
+
+        // Normalize per product spec.
+        $vehicleTypeNorm = is_string($vehicleType) ? strtolower(trim($vehicleType)) : 'car';
+        $profileNorm = is_string($profile) ? strtolower(trim($profile)) : 'driving';
+
+        if ($vehicleTypeNorm === 'walking') {
+            // Walking is a first-class "vehicle_type" for clients.
+            $profileNorm = 'walking';
+            // Walking should never try to use motorways; let the engine decide, but avoid_motorway
+            // is a reasonable default.
+            if ($avoidMotorway === null) {
+                $avoidMotorway = true;
+            }
+        }
+
+        // Motor: when avoid_tolls is toggled, avoid motorways (per spec).
+        if ($vehicleTypeNorm === 'motor' && $avoidTolls === true && $avoidMotorway === null) {
+            $avoidMotorway = true;
+        }
+
+        // Car: avoid_tolls is not supported by the product spec; force it off.
+        if ($vehicleTypeNorm === 'car' && $avoidTolls === true) {
+            $avoidTolls = false;
+        }
 
         Log::info('SafeRouteController: received safe route request', [
             'origin' => $origin,
             'destination' => $destination,
-            'routing_profile' => $profile,
-            'vehicle_type' => $vehicleType,
+            'routing_profile' => $profileNorm,
+            'vehicle_type' => $vehicleTypeNorm,
             'exclude' => $exclude,
             'avoid_motorway' => $avoidMotorway,
+            'avoid_tolls' => $avoidTolls,
+            'toggle_community_report' => $toggleCommunityReport,
             'max_attempts' => $maxAttempts,
         ]);
 
         try {
-            $route = $this->routingService->findSafeRoute($origin, $destination, $profile, $vehicleType, $exclude, $maxAttempts, $avoidMotorway);
+            $route = $this->routingService->findSafeRoute($origin, $destination, $profileNorm, $vehicleTypeNorm, $exclude, $maxAttempts, $avoidMotorway, (bool) $toggleCommunityReport);
 
             Log::info('SafeRouteController: safe route computed successfully', [
                 'engine' => $route['_meta']['engine'] ?? 'unknown',
