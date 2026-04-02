@@ -8,4 +8,5 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
 
-//Schedule::command('weather:fetch')->twiceDaily(12, 24);
+// Run weather fetching every hour.
+Schedule::command('weather:fetch')->hourly()->withoutOverlapping();

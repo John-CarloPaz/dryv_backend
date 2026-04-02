@@ -15,7 +15,7 @@ class FetchAllBarangayWeather extends Command
     public function handle()
     {
         // Only process the first 5 barangays for testing / limited runs
-        $barangays = Barangay::take(3)->get();
+        $barangays = Barangay::take(539)->get();
 
         $count = $barangays->count();
 

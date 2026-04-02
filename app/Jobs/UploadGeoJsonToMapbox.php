@@ -43,7 +43,7 @@ class UploadGeoJsonToMapbox implements ShouldQueue
             // Use a single, fixed tileset (dryv_b) and always replace
             // its source on each upload.
             $tilesetIdFull = config('services.mapbox.tileset_id')
-                ?: (config('services.mapbox.tileset_b') ?: ($username . '.dryv_tileset_1'));
+                ?: (config('services.mapbox.tileset_b') ?: ($username . '.dryv_tileset_5'));
 
             // Mapbox tileset ids must be in the form "{username}.{tileset_id}".
             // If MAPBOX_TILESET_ID is set to only the tileset name, prefix it.

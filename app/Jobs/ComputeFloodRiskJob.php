@@ -75,7 +75,6 @@ class ComputeFloodRiskJob implements ShouldQueue
             return;
         }
 
-        // Get floods whose polygons are fully contained within the barangay
         $barangayWKT = DB::connection('gis_data')->table('pampanga_boundary')
             ->where('gid', $gid)
             ->selectRaw('ST_AsText(geom) as geom_wkt')
@@ -101,11 +100,6 @@ class ComputeFloodRiskJob implements ShouldQueue
             return;
         }
 
-        // Normalize SRIDs when testing intersection. Some flood geometry rows
-        // are stored without an SRID (0), which causes "mixed SRID" errors.
-        // We construct the boundary geom from WKT (assumed EPSG:4326) and compare
-        // against the flood table geometry with an explicit SRID set to 4326.
-        // This avoids ST_Intersects errors when the stored SRID is 0.
         $floods = Noah::on('gis_data')
             ->whereRaw(
                 'ST_Within(ST_SetSRID(geom, 4326), ST_GeomFromText(?, 4326))',
@@ -144,11 +138,7 @@ class ComputeFloodRiskJob implements ShouldQueue
             }
         }
 
-        // Persist Flooded summary. If there are flood matches, store them;
-        // otherwise mark the barangay as not flooded (risk_level = 0)
-        // and clear any previous flooded polygon.
         if (!empty($floodData)) {
-            // Upsert by barangay_id so reruns update the latest record.
             Flooded::updateOrCreate(
                 ['barangay_id' => $this->weather['barangay_id']],
                 [
@@ -165,9 +155,6 @@ class ComputeFloodRiskJob implements ShouldQueue
                 ]
             );
 
-            // Increment the expected counter for polygon jobs and then dispatch
-            // the per-barangay ComputeFloodedPolygonJob. We only do this when
-            // there is actual flood geometry to compute to avoid empty jobs.
             try {
                 $newExpected = Cache::increment('compute_flooded_expected');
                 Log::info('Incremented compute_flooded_expected', [
